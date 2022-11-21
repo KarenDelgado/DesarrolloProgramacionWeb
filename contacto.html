@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACTO</title>
+</head>
+<body>
+    <header>
+         <!--1º Div-->
+         <div>
+            <img src="img/Logo.png" alt="Logo" width="250px" height="auto">
+        </div>
+        <!--NavBar Barra de navegación-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historia.html">Quienes Somos</a></li>
+                <li><a href="menu.html">Menú</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <!--h1-->
+            <h1>Contacto</h1>
+        </nav>
+    </header>
+    <main>
+        <!--2º img externa-->
+        <img src="https://www.iluminet.com/press/wp-content/uploads/2013/02/Gourmet_text.jpg" alt="contacto">
+        <!--Formulario-->
+        <form method="POST" action="#">
+            <fieldset>
+                <!--h3-->
+                <legend><h3>Sección de datos personales</h3></legend>
+                <div>
+                    <label>Nombre:</label>
+                </div>
+                <div>
+                    <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
+                </div>
+                
+                <div>
+                    <label>Apellido:</label>
+                </div>
+                <div>
+                    <input type="text" name="apellido" placeholder="Ingrese su apellido" required>
+                </div>
+                
+                <div>
+                    <label>Edad:</label>
+                </div>
+                <div>
+                    <input type="number" name="edad" placeholder="Ingrese su edad" required>
+                </div>
+
+                <div>
+                    <label>Correo:</label>
+                </div>
+                <div>
+                    <input type="email" name="correo" placeholder="Ingrese su email" required>
+                </div>
+
+                <div>
+                    <label>Dirección:</label>
+                </div>
+                <div>
+                    <input type="text" name="direccion" placeholder="Ingrese su dirección" required>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <!--h3-->
+                <legend><h3>Sección de comentarios</h3></legend>
+                <div>
+                    <label>¿Cómo fue su experiencia? Escoje una opción:</label>
+                </div>
+                <div>
+                    <input type="radio" name="experiencia" value="Buena" required> Buena
+                    <input type="radio" name="experiencia" value="Regular" required> Regular 
+                    <input type="radio" name="experiencia" value="Mala" required> Mala 
+                </div>
+
+                <div>
+                    <label>¿Qué aspectos podemos mejorar? Seleccione las opciones que considere:</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="finan" value="Servicio" required> Servicio
+                    <input type="checkbox" name="finan" value="Tiempo" required> Tiempo de entrega 
+                    <input type="checkbox" name="finan" value="Otros" required> Otros 
+                </div>
+                
+                <div>
+                    <label>¿Qué le gustó más del menú? Seleccione su opción favorita:</label>
+                </div>
+                <div>
+                    <select name="favoritos">
+                        <option value="entradas">Entradas</option>
+                        <option value="platos fuertes">Platos fuertes</option>
+                        <option value="postres">Postres</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Comentarios:</label>
+                </div>
+                <div>
+                    <textarea name="comentario"  placeholder="Ingrese sus comentarios" rows="4" cols="40" required></textarea>
+                </div>
+            </fieldset>
+            
+            <div>
+                <input type="reset" id="boton" value="Limpiar">
+                <input type="submit" id="boton" value="Enviar">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <!--h5-->
+        <h5>Restaurant</h5>
+        <!--h6-->
+        <h6>Copyright © Todos los derechos reservados.</h6>
+    </footer>
+</body>
+</html>
