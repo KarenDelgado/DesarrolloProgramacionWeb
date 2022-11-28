@@ -1,0 +1,23 @@
+
+a{
+    color: D76CFF;
+    margin: 50px;
+    text-decoration: none;
+    text-align: center;
+    background-color: bisque;
+} 
+#actual{
+    color: black;
+    text-align: justify;
+    font-size: 1.1em;
+    font-family: 'Roboto', sans-serif;
+}
+#actual:focus, #actual:hover{
+    color: white;
+  }
+.logo{
+    width: 5.2em;
+    height: auto;
+    float: left;
+    align-content: center;
+}

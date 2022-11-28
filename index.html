@@ -4,52 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <title>INICIO</title>
 </head>
 <body>
     <header>
-        <!--1º Div-->
         <div>
-            <img src="img/Logo.png" alt="Logo" width="250px" height="auto">
+            <img class="logo" src="img/Logo.png" alt="Logo">
         </div>
-        <!--NavBar Barra de navegación-->
-        <nav>
+        <nav class="site-nav">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="historia.html">Quienes Somos</a></li>
-                <li><a href="menu.html">Menú</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="index.html" id="actual"><i class="fa fa-home"></i> Inicio</a></li>
+                <li><a href="historia.html"><i class="fa fa-shopping-bag"></i> Quienes Somos</a></li>
+                <li><a href="menu.html"><i class="fas fa-pizza-slice"></i> Menú</a></li>
+                <li><a href="contacto.html"><i class="far fa-comment"></i> Contacto</a></li>
             </ul>
-            <!--h1-->
             <h1>Inicio</h1>
         </nav>
     </header>
     <main>
-        <!--1º img local-->
         <img src="./img/Lugar.jpg" alt="experienciaGourmet">
-        <!--1º Aside-->
         <aside>
             <p>Conoce nuestro menú de aniversario y deleita tus sentidos.</p>
         </aside>
-         <!--2º Aside-->
         <aside>
             <p>Esta temporada traemos tus sabores preferidos, de la cocina a tu plato.</p>
         </aside>
-        <!--1º Section-->
         <section>
-            <!--h1-->
             <h2>Promociones</h2>
             <p>Conoce nuestras promociones de este mes y disfruta con nosotros.</p>
         </section>
-        <!--Audio-->
         <audio controls autoplay>
             <source src="./audio/jazz.mp3" type="audio/mpeg">
         </audio> 
     </main>
     <footer>
-        <!--h5-->
         <h5>Restaurant</h5>
-        <!--h6-->
         <h6>Copyright © Todos los derechos reservados.</h6>
     </footer>
 </body>
