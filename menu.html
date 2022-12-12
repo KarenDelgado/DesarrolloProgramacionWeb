@@ -4,35 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <title>PRODUCTOS</title>
 </head>
 <body>
-    <header> 
-         <div>
-            <img src="img/Logo.png" alt="Logo">
+    <header>
+        <div class="container">
+            <div class="containerLogo"> 
+                <img class="logo" src="img/Logo.png" alt="Logo">
+            </div>
         </div>
-        <nav>
+        <nav class="site-nav">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="historia.html">Quienes Somos</a></li>
-                <li><a href="menu.html">Menú</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="index.html"><i class="fa fa-home"></i> Inicio</a></li>
+                <li><a href="historia.html"><i class="fa fa-shopping-bag"></i> Quienes Somos</a></li>
+                <li><a href="menu.html" id="actual"><i class="fas fa-pizza-slice"></i> Menú</a></li>
+                <li><a href="contacto.html"><i class="far fa-comment"></i> Contacto</a></li>
+                <li><a href="#"><i class="fas fa-cart-plus"></i> Comprar</a></li>
+                <li><input type="search"><input type="button" value="Buscar"></li>
             </ul>
-            <h1>Menú</h1>
         </nav>
     </header>
     <main>
-        <img src="https://assetspwa.liverpool.com.mx/assets/digital/landing/restaurante/img/trad/chilaquiles-verdes.jpg" alt="platillo">
+        <h1>Menú</h1>
         <table>
             <tr>
-                <th rowspan="4">Entradas></th>
+                <th rowspan="4">Entradas</th>
                 <td>Chilaquiles Suizos</td>
             </tr>
             <tr>
                 <td>Molletes sencillos</td>
             </tr>
             <tr>
-                <td>Tacos de camarón al chipotle</td>
+                <td>Tacos de pollo</td>
             </tr>
             <tr>
                 <td>Consomé especial</td>
@@ -46,10 +51,10 @@
                 <td>Pasta Carbonara</td>
             </tr>
             <tr>
-                <td>Filete de Pescado Empanizado </td>
+                <td>Pechuga Empanizada</td>
             </tr>
             <tr>
-                <td>Chile relleno</td>
+                <td>Arrachera</td>
             </tr>
 
             <tr>
@@ -57,23 +62,39 @@
                 <td>Arroz con leche </td>
             </tr>
             <tr>
-                <td>Pastel de Elote</td>
+                <td>Pastel de Chocolate</td>
             </tr>
             <tr>
                 <td>Pie de Limón</td>
             </tr>
             <tr>
-                <td>Gelato premium</td>
+                <td>Natilla</td>
             </tr>
         </table>
-        <h3>¿Cómo pedir?</h3>
-        <ol>
-            <li>Selecciona tus productos</li>
-            <li>Mandalos al carrito</li>
-            <li>Verifica tu orden</li>
-            <li>Da clic en comprar</li>
-            <li>¡Listo! Tu orden llegará pronto</li>
-        </ol>
+        <div class="platillos">
+            <img src="./img/Chilaquiles.jpg" class="imgPlatillo" alt="Chilaquiles">
+            <img src="./img/Molletes.jpg" class="imgPlatillo" alt="Molletes">
+            <img src="./img/Tacos.jpg" class="imgPlatillo" alt="Tacos"> 
+            <img src="./img/Consome.jpg" class="imgPlatillo" alt="Consome">
+            <img src="./img/Lasaña.jpg" class="imgPlatillo" alt="Lasaña">
+            <img src="./img/Pasta.jpg" class="imgPlatillo" alt="Pasta">
+            <img src="./img/Pechuga.jpg" class="imgPlatillo" alt="Pechuga">  
+            <img src="./img/Arrachera.jpg" class="imgPlatillo" alt="Arrachera">
+            <img src="./img/Arroz.jpg" class="imgPlatillo" alt="Arroz">
+            <img src="./img/Pastel.jpg" class="imgPlatillo" alt="Pastel">
+            <img src="./img/Limon.jpg" class="imgPlatillo" alt="Limon">   
+            <img src="./img/Natilla.jpg" class="imgPlatillo" alt="Natilla">
+          </div>
+        <section>
+            <h3>¿Cómo pedir?</h3>
+            <ol>
+                <li>Selecciona tus productos</li>
+                <li>Mandalos al carrito</li>
+                <li>Verifica tu orden</li>
+                <li>Da clic en comprar</li>
+                <li>¡Listo! Tu orden llegará pronto</li>
+            </ol>
+        </section>
     </main>
     <footer>
         <h5>Restaurant</h5>
