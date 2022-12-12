@@ -87,16 +87,63 @@ header{
 #textoPrincipal h2{
     font-size: 2em;
 }
-.platillos {
+.platillos{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-areas: 
+    " area1 area2 area3 "
+    " area4 . . "
+    " area5 . . "
+    " area6 area7 . "
+    " area8 . . "
+    " area9 . . "
+    " area10 area11 area12 ";
     background-color: antiquewhite;
+    gap: 5px;
     padding: 10px;
     justify-content: space-around;
 }  
-.imgPlatillo {
-    border: 1px solid rgba(0, 0, 0, 0.8);
+.platillos>div{
+    display: flex;
+}
+.imgPlatillo{
+    border: 2px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
     width: 350px;
     height: 240px;
+}
+.area1{
+    grid-area: area1;
+}
+.area2{
+    grid-area: area2;
+}
+.area3{
+    grid-area: area3;
+}
+.area4{
+    grid-area: area4;
+}
+.area5{
+    grid-area: area5;
+}
+.area6{
+    grid-area: area6;
+}
+.area7{
+    grid-area: area7;
+}
+.area8{
+    grid-area: area8;
+}
+.area9{
+    grid-area: area9;
+}
+.area10{
+    grid-area: area10;
+}
+.area11{
+    grid-area: area11;
+}
+.area12{
+    grid-area: area12;
 }
