@@ -147,3 +147,11 @@ header{
 .area12{
     grid-area: area12;
 }
+
+@media screen and (min-width:760px){
+
+}
+
+@media screen and (min-width:1010px){
+
+}
