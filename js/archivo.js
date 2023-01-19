@@ -1,30 +1,56 @@
-var mensaje = "Hola mundo!";
-console.log(mensaje);
-
-let numero = 17;
-console.log(numero);
-
-let verdadero = true;
-console.log(verdadero);
-
-let indefinido = undefined;
-console.log(indefinido);
-
-let vacio = null;
-console.log(vacio);
-
-
-var nombre = prompt("Ingresa tu nombre: ");
-var ciudad = prompt("Ingresa la ciudad en donde vives: ");
-console.log(`Hola ${nombre}, te deseo felices fiestas hasta ${ciudad} c:`);
-
-
-let num1 = parseInt(prompt("Ingresa el primer numero: "));
-let num2 = parseInt(prompt("Ingresa el segundo numero: "));;
-window.alert(`La suma de ${num1} más ${num2} es igual a ${num1 + num2}`);
-if(num1 == num2){
-    window.alert(`Los números son iguales`);
-} else {
-    window.alert(`Los números no son iguales`);
+var n1 = parseInt(prompt("Ingresa el primer número: "));
+var n2 = parseInt(prompt("Ingresa el segundo número: "));
+var n3 = parseInt(prompt("Ingresa el tercer número: "));
+function suma(a, b, c) {
+    let total =  a + b + c;
+    console.log("La suma es:", total);
 }
-window.alert(`${num1} equivale ahora (=) a ${num2}, por lo que ${num1 = num2} más igual (+=) a ${num2} resulta en ${num1 += num2}`);
+suma(n1,n2,n3);
+
+
+var n4 = parseInt(prompt("Ingresa un nuevo número: "));
+var n5 = parseInt(prompt("Ingresa otro número: "));
+function comparacion (d, e){ 
+    if(d==e) {
+        console.log("Los números son iguales");
+    } else if(d<e) {
+        console.log(`${d} es menor que ${e}`);
+    } else {
+        console.log(`${e} es menor que ${d}`);
+    }
+}
+comparacion(n4,n5);
+
+
+const suma2 = (a, b, c) => console.log(`La suma es: ${a+b+c} (x2)`);
+suma2(n1,n2,n3);
+
+
+const comparacion2 = (d, e) => {
+    if(d==e) {
+        console.log("Los números son iguales (x2)");
+    } else if(d<e) {
+        console.log(`${d} es menor que ${e} (x2)`);
+    } else {
+        console.log(`${e} es menor que ${d} (x2)`);
+    }
+}
+comparacion2(n4,n5);
+
+
+const empleado = {
+    nombre: "Jesús",
+    edad: 23,
+    puesto: "Programador",
+    turno: "Matutino",
+    correo: "jesus@example.com",
+    ciudad: "Puebla"
+}
+const datosEmpleado = ({nombre,puesto,correo}) => console.log("Los datos del empleado son:", nombre, puesto, correo);
+datosEmpleado(empleado);
+
+
+var mix = ["Pizza", 30, 170, ["pepperoni", "mexicana", "hawaiana", "ranchera", "queso"]];
+const mixArray = () => { return mix; }
+const [nombre, tamaño, precio, tipo] = mixArray();
+console.log("Caracteristicas del producto:", nombre, precio, tipo);
