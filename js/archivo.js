@@ -1,56 +1,32 @@
-var n1 = parseInt(prompt("Ingresa el primer número: "));
-var n2 = parseInt(prompt("Ingresa el segundo número: "));
-var n3 = parseInt(prompt("Ingresa el tercer número: "));
-function suma(a, b, c) {
-    let total =  a + b + c;
-    console.log("La suma es:", total);
+let number = parseInt(prompt("Ingrese su edad: "));
+if(number>=18){
+    console.log("VÁLIDO");
+} else {
+    console.log("NO VÁLIDO");
 }
-suma(n1,n2,n3);
 
-
-var n4 = parseInt(prompt("Ingresa un nuevo número: "));
-var n5 = parseInt(prompt("Ingresa otro número: "));
-function comparacion (d, e){ 
-    if(d==e) {
-        console.log("Los números son iguales");
-    } else if(d<e) {
-        console.log(`${d} es menor que ${e}`);
-    } else {
-        console.log(`${e} es menor que ${d}`);
-    }
+const pizzas = [{Tipo: "Pepperoni", Precio: 150, Disponible: true}, {Tipo: "Mexicana", Precio: 180, Disponible: true},
+            {Tipo: "Ranchera", Precio: 130, Disponible: false}, {Tipo: "Hawaiana", Precio: 160, Disponible: true}];
+for (i = 0; i < pizzas.length; i++) {
+    //console.log(pizzas[i]);
+    console.log("Pizza No."+[i+1]+"\n Especialidad:"+pizzas[i].Tipo+"\n Precio: $"+pizzas[i].Precio+"\n Disponible:"+pizzas[i].Disponible);
 }
-comparacion(n4,n5);
 
-
-const suma2 = (a, b, c) => console.log(`La suma es: ${a+b+c} (x2)`);
-suma2(n1,n2,n3);
-
-
-const comparacion2 = (d, e) => {
-    if(d==e) {
-        console.log("Los números son iguales (x2)");
-    } else if(d<e) {
-        console.log(`${d} es menor que ${e} (x2)`);
-    } else {
-        console.log(`${e} es menor que ${d} (x2)`);
-    }
+let op = prompt("BIENVENIDO \nIngrese el numero de la pizza elegida: ");
+switch(op){
+    case '1':
+        console.log("Pizza No. 1 Especialidad: "+pizzas[0].Tipo+"\n Promoción: Tiene un descuento del 20% \n Precio: $"+pizzas[0].Precio+"\n Precio con descuento: $"+pizzas[0].Precio*.80);
+        break;
+    case '2':
+        console.log("Pizza No. 2 Especialidad: "+pizzas[1].Tipo+"\n Promoción: Tiene un descuento del 25% \n Precio: $"+pizzas[1].Precio+"\n Precio con descuento: $"+pizzas[1].Precio*.75);
+        break;
+    case '3':
+        console.log("Pizza No. 3 Especialidad: "+pizzas[2].Tipo+"\n Promoción: Tiene un descuento del 30% \n Precio: $"+pizzas[2].Precio+"\n Precio con descuento: $"+pizzas[2].Precio*.70);
+        break
+    case '4':
+        console.log("Pizza No. 4 Especialidad: "+pizzas[3].Tipo+"\n Promoción: Tiene un descuento del 15% \n Precio: $"+pizzas[3].Precio+"\n Precio con descuento: $"+pizzas[3].Precio*.85);
+        break;
+    default:
+        console.log("No. de pizza inválido");
+        break;
 }
-comparacion2(n4,n5);
-
-
-const empleado = {
-    nombre: "Jesús",
-    edad: 23,
-    puesto: "Programador",
-    turno: "Matutino",
-    correo: "jesus@example.com",
-    ciudad: "Puebla"
-}
-const datosEmpleado = ({nombre,puesto,correo}) => console.log("Los datos del empleado son:", nombre, puesto, correo);
-datosEmpleado(empleado);
-
-
-var mix = ["Pizza", 30, 170, ["pepperoni", "mexicana", "hawaiana", "ranchera", "queso"]];
-const mixArray = () => { return mix; }
-const [nombre, tamaño, precio, tipo] = mixArray();
-console.log("Caracteristicas del producto:", nombre, precio, tipo);
