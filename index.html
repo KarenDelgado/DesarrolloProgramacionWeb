@@ -1,59 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/estilos.css" type="text/css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <title>INICIO</title>
+	<title>INICIO | BTR</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+	<link rel="stylesheet" href="css/Formato1.css" type="text/css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/Archivo.js"></script>
 </head>
-<body> 
+<body>
+	<img src="img/Fondo.jpg" alt="fondo" class="fondo">
     <header>
         <div class="container">
-            <div class="containerLogo"> 
-                <img class="logo" src="img/Logo.png" alt="Logo">
-            </div>
+            <div class="name"> <img class="logo" src="img/Logo.png"> &nbsp; </div>
         </div>
-        <nav class="site-nav">
+        <nav id="site-nav" class="site-nav">
             <ul>
-                <li><a href="index.html" id="actual"><i class="fa fa-home"></i> Inicio</a></li>
-                <li><a href="historia.html"><i class="fa fa-shopping-bag"></i> Quienes Somos</a></li>
-                <li><a href="menu.html"><i class="fas fa-pizza-slice"></i> Menú</a></li>
-                <li><a href="contacto.html"><i class="far fa-comment"></i> Contacto</a></li>
-                <li><a href="#"><i class="fas fa-cart-plus"></i> Comprar</a></li>
-                <li><input type="search"><input type="button" value="Buscar"></li>
+                <li><a id="actual" href="index.html"><i class="fa fa-home"></i> INICIO</a></li>
+                <li><a href="Productos.html"><i class="fa fa-shopping-bag"></i> PRODUCTOS</a></li>
+                <li><a href="Contacto.html"><i class="fas fa-headset"></i> CONTACTO</a></li>
+                <li><a href="Iniciar Sesion.php"><i class="fas fa-sign-in-alt"></i> INICIAR SESIÓN | REGRISTRARSE</a></li>
             </ul>
         </nav>
+        <div id="menu-toggle" class="menu-toggle" onClick="cambiarClase()">
+            <div class="hamburger"></div>
+        </div>
     </header>
-    <main> 
-        <div id="principal">
-            <div id="textoPrincipal">
-                <h1>EXPERIENCIA GOURMET</h1>
-                <h2>Desafía tus gustos</h2>
+    
+    <div class="encabezado">
+        <br>
+        <img src="img/Inicio.png" id="principal">
+        <br><br><br><hr><br><br>
+        <h1><b>TOP VENTAS</b></h1>
+        <div id="top">
+            <div class="ventas">
+                <img src="img/top/producto1.png" class="top_img"><br>
+                <b class="top_etiqueta">Hoodie Black </b>
+            </div>
+            <div class="ventas">
+                <img src="img/top/producto5.png" class="top_img"><br>
+                <b class="top_etiqueta">Long Sleeve White </b>
+            </div>
+            <div class="ventas">
+                <img src="img/top/producto9.png" class="top_img"><br>
+                <b class="top_etiqueta">Beanie Red </b>
             </div>
         </div>
-        
-        <img src="./img/Lugar.jpg" alt="experienciaGourmet">
-        <aside>
-            <p>Conoce nuestro menú de aniversario y deleita tus sentidos.</p>
-        </aside>
-        <aside>
-            <p>Esta temporada traemos tus sabores preferidos, de la cocina a tu plato.</p>
-        </aside>
-        <section>
-            <h2>Promociones</h2>
-            <p>Conoce nuestras promociones de este mes y disfruta con nosotros.</p>
-        </section>
-        <audio controls autoplay>
-            <source src="./audio/jazz.mp3" type="audio/mpeg">
-        </audio> 
-    </main>
-    <footer>
-        <h5>Restaurant</h5>
-        <h6>Copyright © Todos los derechos reservados.</h6>
-    </footer>
-
-    <script src="./js/archivo.js"></script>
+        <br><br><br><a href="Productos.html" class="ver_mas">VER MAS PRODUCTOS</a><br><br>      
+    </div><br>
+   
+    <div class="footer">
+        <img class="logoFooter" src="img/Logo.png">
+        <h2>Copyright © Todos los derechos reservados.</h2>
+    </div>
 </body>
 </html>

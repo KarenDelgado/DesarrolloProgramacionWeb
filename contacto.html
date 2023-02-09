@@ -1,120 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/estilos.css" type="text/css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <title>CONTACTO</title>
+	<title>CONTACTO | BTR</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+	<link rel="stylesheet" href="css/Formato1.css" type="text/css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/Archivo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
-<body> 
+<body onload="carga_estados();">
+	<img src="img/Fondo.jpg" alt="fondo" class="fondo">
     <header>
         <div class="container">
-            <div class="containerLogo"> 
-                <img class="logo" src="img/Logo.png" alt="Logo">
-            </div>
+            <div class="name"> <img class="logo" src="img/Logo.png"> &nbsp; </div>
         </div>
-        <nav class="site-nav">
+        <nav id="site-nav" class="site-nav">
             <ul>
-                <li><a href="index.html"><i class="fa fa-home"></i> Inicio</a></li>
-                <li><a href="historia.html"><i class="fa fa-shopping-bag"></i> Quienes Somos</a></li>
-                <li><a href="menu.html"><i class="fas fa-pizza-slice"></i> Menú</a></li>
-                <li><a href="contacto.html" id="actual"><i class="far fa-comment"></i> Contacto</a></li>
-                <li><a href="#"><i class="fas fa-cart-plus"></i> Comprar</a></li>
-                <li><input type="search"><input type="button" value="Buscar"></li>
+                <li><a href="index.html"><i class="fa fa-home"></i> INICIO</a></li>
+                <li><a href="Productos.html"><i class="fa fa-shopping-bag"></i> PRODUCTOS</a></li>
+                <li><a id="actual" href="Contacto.html"><i class="fas fa-headset"></i> CONTACTO</a></li>
+                <li><a href="Iniciar Sesion.php"><i class="fas fa-sign-in-alt"></i> INICIAR SESIÓN | REGRISTRARSE</a></li>
             </ul>
         </nav>
+        <div id="menu-toggle" class="menu-toggle" onClick="cambiarClase()">
+            <div class="hamburger"></div>
+        </div>
     </header>
-    <main>
-        <h1>Contacto</h1>
-        <img src="https://www.iluminet.com/press/wp-content/uploads/2013/02/Gourmet_text.jpg" alt="contacto">
-        <form method="POST" action="#">
-            <fieldset>
-                <legend><h3>Sección de datos personales</h3></legend>
-                <div>
-                    <label>Nombre:</label>
+    
+    <div class="encabezado">
+        <br><br>
+        <h1><b>CONTACTO</b></h1>
+        <p class="pEntrada">Tus comentarios son muy importantes para nosotros. Mandenos un mensaje si tiene quejas, suguerencias, recomendaciones o aportaciones a nuestros servicios y productos.</p><br>
+        <div class="formulario">
+        <form action="Comentario Enviado.php" method="POST" onsubmit="return validar4();">
+            <div class="row">
+                <div class="col-25">
+                    <label>Nombre (s):</label>
                 </div>
-                <div>
-                    <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
+                <div class="col-75">
+                    <input type="text" name="nombre" id="nombre" onkeypress="return soloLetras(event)" placeholder="Ingresa tu nombre(s).."><br>
                 </div>
-                
-                <div>
-                    <label>Apellido:</label>
-                </div>
-                <div>
-                    <input type="text" name="apellido" placeholder="Ingrese su apellido" required>
-                </div>
-                
-                <div>
-                    <label>Edad:</label>
-                </div>
-                <div>
-                    <input type="number" name="edad" placeholder="Ingrese su edad" required>
-                </div>
-
-                <div>
-                    <label>Correo:</label>
-                </div>
-                <div>
-                    <input type="email" name="correo" placeholder="Ingrese su email" required>
-                </div>
-
-                <div>
-                    <label>Dirección:</label>
-                </div>
-                <div>
-                    <input type="text" name="direccion" placeholder="Ingrese su dirección" required>
-                </div>
-            </fieldset>
+            </div>
             
-            <fieldset>
-                <legend><h3>Sección de comentarios</h3></legend>
-                <div>
-                    <label>¿Cómo fue su experiencia? Escoje una opción:</label>
+            <div class="row">
+                <div class="col-25">
+                    <label>Apellido Paterno:</label>
                 </div>
-                <div>
-                    <input type="radio" name="experiencia" value="Buena" required> Buena
-                    <input type="radio" name="experiencia" value="Regular" required> Regular 
-                    <input type="radio" name="experiencia" value="Mala" required> Mala 
+                <div class="col-75">
+                    <input type="text" name="apellido1" id="apellido1" onkeypress="return soloLetras(event)" placeholder="Ingresa tu apellido paterno...">
                 </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-25">
+                    <label>Apellido Materno:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="apellido2" id="apellido2" onkeypress="return soloLetras(event)" placeholder="Ingresa tu apellido materno...">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-25">
+                     <label>Correo: </label>
+                </div>
+                <div class="col-75">
+                    <input type="email" name="correo" id="correo" onkeyup="valida_correo()" placeholder="Ingresa tu correo.."><span id="ver_email"></span>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-25">
+                    <label>Estado:</label>
+                </div>
+                <div class="col-75">
+                    <select id="estado" name="estado" size="1" placeholder="Elige un estado.."></select><br>
+                </div>
+            </div>
 
-                <div>
-                    <label>¿Qué aspectos podemos mejorar? Seleccione las opciones que considere:</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="finan" value="Servicio" required> Servicio
-                    <input type="checkbox" name="finan" value="Tiempo" required> Tiempo de entrega 
-                    <input type="checkbox" name="finan" value="Otros" required> Otros 
-                </div>
-                
-                <div>
-                    <label>¿Qué le gustó más del menú? Seleccione su opción favorita:</label>
-                </div>
-                <div>
-                    <select name="favoritos">
-                        <option value="entradas">Entradas</option>
-                        <option value="platos fuertes">Platos fuertes</option>
-                        <option value="postres">Postres</option>
-                    </select>
-                </div>
-                <div>
+            <div class="row">
+                <div class="col-25">
                     <label>Comentarios:</label>
                 </div>
-                <div>
-                    <textarea name="comentario"  placeholder="Ingrese sus comentarios" rows="4" cols="40" required></textarea>
+                <div class="col-75">
+                    <textarea name="comentario" id="comentario" style="height:180px" placeholder="Ingresa tu comentario(s).."></textarea><br>
                 </div>
-            </fieldset>
-            
-            <div>
-                <input type="reset" id="boton" value="Limpiar">
-                <input type="submit" id="boton" value="Enviar">
             </div>
+    		
+            <div class="intro">
+                <br><input type="submit" value="Enviar"> 
+                <input type="reset" value="Limpiar">
+            </div>
+            <br><br>
         </form>
-    </main>
-    <footer>
-        <h5>Restaurant</h5>
-        <h6>Copyright © Todos los derechos reservados.</h6>
-    </footer>
+        </div>
+        
+        <p class="pMedio"><b>Email:</b> info@btrofficial.com</p>
+        <br><p class="pMedio">Síguenos en nuestras redes sociales</p>
+        <a title="Facebook" href="https://www.facebook.com/bigtimerush" target="_blank"><img src="img/facebook.png" class="redes"></a>
+        <a title="Twitter" href="https://twitter.com/bigtimerush" target="_blank"><img src="img/twitter.png" class="redes"></a>
+        <a title="Instagram" href="https://www.instagram.com/bigtimerush/?hl=en" target="_blank"><img src="img/instagram.png" class="redes"></a>
+        <a title="Youtube" href="https://www.youtube.com/user/BIGtimeRUSH" target="_blank"><img src="img/youtube.png" class="redes"></a>
+        
+        <br><hr><br><br>
+        <h1><b>VISITANOS</b></h1>
+        <p class="pMedio">Ven y conoce nuestra tienda</p>
+        <p class="pMedio">Calle 6 No. 3306, Colonia Loma Xicohtencatl,<br>Tlaxcala, Tlaxcala</p><br>
+        <p class="pMedio">Horario de Lunes a Viernes</p>
+        <p class="pMedio">11:00 a 19:00</p>
+        <p class="pMedio">Sabados</p>
+        <p class="pMedio">11:00 a 16:00</p><br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.4844094312434!2d-98.24696698583861!3d19.304775249759693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfd9698a4320ef%3A0x3d4bd230384fb07f!2sC.%206%203306%2C%20La%20Loma%20Xicohtencatl%2C%20Xicoht%C3%A9ncatl%2C%2090070%20Tlaxcala%20de%20Xicoht%C3%A9ncatl%2C%20Tlax.!5e0!3m2!1ses-419!2smx!4v1638503528376!5m2!1ses-419!2smx"></iframe>
+        <br><br>
+    </div>
+    
+    <div class="footer">
+        <img class="logoFooter" src="img/Logo.png">
+        <h2>Copyright © Todos los derechos reservados.</h2>
+    </div>
 </body>
 </html>
