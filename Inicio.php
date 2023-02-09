@@ -21,10 +21,10 @@ if(!isset($usuario)){
     <!--<script src="js/Archivo1.js"></script>-->
 </head>
 <body>
-	<img src="img/Fondo.jpg" alt="fondo" class="fondo">
+	<img src="./img/Fondo.jpg" alt="fondo" class="fondo">
     <header>
         <div class="container">
-            <div class="name"> <img class="logo" src="img/Logo.png"> &nbsp; </div>
+            <div class="name"> <img class="logo" src="./img/Logo.png"> &nbsp; </div>
         </div>
         <nav id="site-nav" class="site-nav">
             <ul>
@@ -42,20 +42,20 @@ if(!isset($usuario)){
     
     <div class="encabezado">
         <br>
-        <img src="img/Inicio.png" id="principal">
+        <img src="./img/Inicio.png" id="principal">
         <br><br><br><hr><br><br>
         <h1><b>TOP VENTAS</b></h1>
         <div id="top">
             <div class="ventas">
-                <img src="img/top/producto1.png" class="top_img"><br>
+                <img src="./img/top/producto1.png" class="top_img"><br>
                 <b class="top_etiqueta">Hoodie Black </b>
             </div>
             <div class="ventas">
-                <img src="img/top/producto5.png" class="top_img"><br>
+                <img src="./img/top/producto5.png" class="top_img"><br>
                 <b class="top_etiqueta">Long Sleeve White </b>
             </div>
             <div class="ventas">
-                <img src="img/top/producto9.png" class="top_img"><br>
+                <img src="./img/top/producto9.png" class="top_img"><br>
                 <b class="top_etiqueta">Beanie Red </b>
             </div>
         </div>
@@ -63,7 +63,7 @@ if(!isset($usuario)){
     </div><br>
    
     <div class="footer">
-        <img class="logoFooter" src="img/Logo.png">
+        <img class="logoFooter" src="./img/Logo.png" alt="Logo Footer">
         <h2>Copyright © Todos los derechos reservados.</h2>
     </div>
 </body>

@@ -10,10 +10,10 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 <body>
-	<img src="img/Fondo.jpg" alt="fondo" class="fondo">
+	<img src="./img/Fondo.jpg" alt="fondo" class="fondo">
     <header>
         <div class="container">
-            <div class="name"> <img class="logo" src="img/Logo.png"> &nbsp; </div>
+            <div class="name"> <img class="logo" src="./img/Logo.png" alt="Logo Principal"> &nbsp; </div>
         </div>
         <nav id="site-nav" class="site-nav">
             <ul>
@@ -64,7 +64,7 @@
     </div>
     
     <div class="footer">
-  		<img class="logoFooter" src="img/Logo.png">
+  		<img class="logoFooter" src="./img/Logo.png" alt="Logo Footer">
         <h2>Copyright © Todos los derechos reservados.</h2>
  	</div>
 </body>

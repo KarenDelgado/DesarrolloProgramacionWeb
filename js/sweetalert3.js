@@ -8,7 +8,7 @@ Swal.fire({
 	//closeButtonHtml: '<a href="Registro.html">Clic </a>'
 	padding: '1.5rem',
 	allowOutsideClick: false,
-	imageUrl: 'img/cheems_alerta.png',
+	imageUrl: './img/cheems_alerta.png',
 	imageWidth:'40%'
 
 });

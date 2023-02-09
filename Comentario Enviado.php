@@ -9,10 +9,10 @@
     <script src="js/Archivo.js"></script>
 </head>
 <body onload="nobackbutton();">
-	<img src="img/Fondo.jpg" alt="fondo" class="fondo">
+	<img src="./img/Fondo.jpg" alt="fondo" class="fondo">
     <header>
         <div class="container">
-            <div class="name"> <img class="logo" src="img/Logo.png"> &nbsp; </div>
+            <div class="name"> <img class="logo" src="./img/Logo.png" alt="Logo Principal"> &nbsp; </div>
         </div>
         <nav id="site-nav" class="site-nav">
             <ul>
@@ -32,14 +32,14 @@
         <h1>CONTACTO</h1>
         <h2> Muchas gracias por tus comentarios.</h2>
         <div class="intro">
-          <img class="envio" src="img/cheems_operador.png">
+          <img class="envio" src="./img/cheems_operador.png" alt="Cheems Operador">
         </div>
         
         <p class="pMedio"><b>Email:</b> ihelpcontactos@gmail.com y tolamacontactos@gmail.com</p>
         <p class="pMedio"><b>Teléfono:</b> 3320 32 08 91</p>
         <br><p class="pMedio">Síguenos en nuestras redes sociales</p>
-        <a title="Facebook" href="https://www.facebook.com/Reparacion-de-Celulares-Puebla-IHelp-115050856703997" target="_blank"><img src="img/facebook.png" class="redes"></a>
-        <a title="Instagram" href="https://www.instagram.com/beto_tolama69/" target="_blank"><img src="img/instagram.png" class="redes"></a>
+        <a title="Facebook" href="https://www.facebook.com/Reparacion-de-Celulares-Puebla-IHelp-115050856703997" target="_blank"><img src="./img/facebook.png" class="redes" alt="Facebook"></a>
+        <a title="Instagram" href="https://www.instagram.com/beto_tolama69/" target="_blank"><img src="./img/instagram.png" class="redes" alt="Instagram"></a>
         
         <br><hr><br><br>
         <h1>VISITANOS</h1>
@@ -54,7 +54,7 @@
     </div>
     
     <div class="footer">
-        <img class="logoFooter" src="img/Logo.png">
+        <img class="logoFooter" src="./img/Logo.png" alt="Logo Footer">
         <h2>Copyright © Todos los derechos reservados.</h2>
     </div>
 
