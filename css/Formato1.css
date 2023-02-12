@@ -5,7 +5,7 @@ body{
     margin:0;
 }
 h1, h2{
-  margin-top: 0;
+  margin: 30px auto;
   font-family: sans-serif;
   font-weight: 400;
   color: white;
@@ -25,6 +25,8 @@ iframe{
   border: none;
   margin: 0px auto;
 }
+
+/*Menú*/
 header{
     background: transparent;
     color: #ebebd3;
@@ -36,34 +38,13 @@ header::after{
     clear: both;
     display: block;
 }
-
-/*duda*/
-.marca{
-  float: left;
-  height: 1em;
-}
-
-/*Menú*/
 .container{
     width: 95%;
     max-width: 1000px;
     margin: 0 auto;
 }
-.name{
-    float: left;
-    font-size: 1.3em;
-    text-transform: uppercase;
-    font-weight: 700px;
-    font-family: sans-serif;
-    letter-spacing: 1mm;
-    display: inline-block;
-    align-content: center;
-}
-.name span{
-    font-weight: 300;
-}
 .logo{
-  width: 5.2em;
+  width: 6em;
   float: left;
   align-content: center;
 }
@@ -159,6 +140,7 @@ header::after{
 }
 .footer {
   color: white;
+  margin-top: 14%;
   padding: 15px;
   font-size: .5em;
   text-align: center;
@@ -169,20 +151,18 @@ header::after{
   float: center;
   align-content: center;
 }
-.intro{
-  text-align: center;
-}
 
-/*Pagina Inicio.hmtl*/
+/*-------------------------------------------------------------------------*/
+/*Pagina Inicio.hmtl*/         /*LISTA*/
 #principal{
   width: 95%;
   height: auto;
-  margin: 10px auto;
+  margin: 30px auto;
 }
 #top{
   background: goldenrod;
   width: 90%; 
-  margin: 0 auto;
+  margin-bottom: 12%;
   display: inline-block;
   justify-content: center;
   align-items: center;
@@ -212,8 +192,13 @@ header::after{
   font-size: 95%;
   text-decoration: none;
 }
+/*-------------------------------------------------------------------------*/
 
 /*dddddd*/
+.intro{
+  margin: 5% auto;
+  text-align: center;
+}
 .centrar{
   width: 100%;
   align-items: center;
@@ -439,7 +424,7 @@ hr.linea{
   margin-left: auto;
   margin-right: auto;
 }
-input[type=text], input[type=email],textarea, input[type=password]{
+input[type=text], input[type=email], textarea, input[type=password]{
   width: 90%;
   padding: 12px;
   border: 1px solid grey;
@@ -558,6 +543,7 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
   width: 80%;
   color: #c0c0c0;
   margin: 0px auto;
+  margin-bottom: 20px;
   /*padding: 3px;
   font-size: 0.8em;*/
 }
@@ -578,7 +564,7 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
   width: 70%;
 }
 .redes{
-  width: 14%;
+  width: 11%;
 }
 
 /*Pagina Nosotros.html*/
@@ -630,8 +616,12 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
       background: black;
       color: white;
   }
+  .footer {
+    margin-top: 8%;
+  }
   #top{
     width: 60%; 
+    margin-bottom: 7%;
   }
   #productos{
     width: 60%;
@@ -696,10 +686,10 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
   }
   .pMedio, .pIzquierda, .pDerecha, .pJustificado, .pEntrada{
     font-size: 1.5em;
-    margin: 0px auto
+    margin: 0px auto;
   }
   .redes{
-    width: 8%;
+    width: 6%;
   }
   #perfil{
     width: 35%;
@@ -789,10 +779,12 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
   }
   #principal{
     width: 65%;
+    margin: 50px auto;
   }
   #top{
     width: 78%; 
     display: inline-flex;
+    margin-bottom: 4%;
   }
   #productos{
     width: 75%; 
@@ -875,5 +867,6 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
   }
   .footer {
     font-size: .6em;
+    margin-top: 4%;
   }
 }

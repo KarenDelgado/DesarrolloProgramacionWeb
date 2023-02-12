@@ -13,18 +13,18 @@ if(!isset($usuario)){
 <head>
 	<title>INICIO | BTR</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
-	<link rel="stylesheet" href="css/Formato1.css" type="text/css">
-    <link rel="stylesheet" href="css/Formato2.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./css/Formato1.css">
+    <link rel="stylesheet" type="text/css" href="./css/Formato2.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="js/Archivo.js"></script>
-    <!--<script src="js/Archivo1.js"></script>-->
+    <script src="./js/Archivo.js"></script>
 </head>
 <body>
-	<img src="./img/Fondo.jpg" alt="fondo" class="fondo">
+<img class="fondo" src="./img/Fondo.jpg" alt="Fondo">
     <header>
         <div class="container">
-            <div class="name"> <img class="logo" src="./img/Logo.png"> &nbsp; </div>
+            <a title="Inicio" href="Inicio.php"><img class="logo" src="./img/Logo.png" alt="Logo Principal"></a>
         </div>
         <nav id="site-nav" class="site-nav">
             <ul>
@@ -41,26 +41,27 @@ if(!isset($usuario)){
     </header>
     
     <div class="encabezado">
-        <br>
-        <img src="./img/Inicio.png" id="principal">
-        <br><br><br><hr><br><br>
+        <img id="principal" src="./img/Inicio.png" alt="Portada Principal">
+        <hr>
         <h1><b>TOP VENTAS</b></h1>
         <div id="top">
             <div class="ventas">
-                <img src="./img/top/producto1.png" class="top_img"><br>
+                <img class="top_img" src="./img/top/producto1.png" alt="Hoodie Black"><br>
                 <b class="top_etiqueta">Hoodie Black </b>
             </div>
             <div class="ventas">
-                <img src="./img/top/producto5.png" class="top_img"><br>
+                <img class="top_img" src="./img/top/producto5.png" alt="Long Sleeve White"><br>
                 <b class="top_etiqueta">Long Sleeve White </b>
             </div>
             <div class="ventas">
-                <img src="./img/top/producto9.png" class="top_img"><br>
+                <img class="top_img" src="./img/top/producto9.png" alt="Beanie Red"><br>
                 <b class="top_etiqueta">Beanie Red </b>
             </div>
         </div>
-        <br><br><br><a href="Productos.php" class="ver_mas">VER MAS PRODUCTOS</a><br><br>      
-    </div><br>
+        <div>
+            <a href="Productos.php" class="ver_mas">VER MAS PRODUCTOS</a>
+        </div>    
+    </div>
    
     <div class="footer">
         <img class="logoFooter" src="./img/Logo.png" alt="Logo Footer">

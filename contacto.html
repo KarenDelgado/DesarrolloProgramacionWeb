@@ -3,17 +3,18 @@
 <head>
 	<title>CONTACTO | BTR</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
-	<link rel="stylesheet" href="css/Formato1.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="./css/Formato1.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="js/Archivo.js"></script>
+    <script src="./js/Archivo.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 <body onload="carga_estados();">
-	<img src="./img/Fondo.jpg" alt="fondo" class="fondo">
+	<img class="fondo" src="./img/Fondo.jpg" alt="Fondo">
     <header>
-        <div class="container">
-            <div class="name"> <img class="logo" src="./img/Logo.png" alt="Logo Principal"> &nbsp; </div>
+         <div class="container">
+            <a title="Inicio" href="index.html"><img class="logo" src="./img/Logo.png" alt="Logo Principal"></a>
         </div>
         <nav id="site-nav" class="site-nav">
             <ul>
@@ -29,9 +30,8 @@
     </header>
     
     <div class="encabezado">
-        <br><br>
         <h1><b>CONTACTO</b></h1>
-        <p class="pEntrada">Tus comentarios son muy importantes para nosotros. Mandenos un mensaje si tiene quejas, suguerencias, recomendaciones o aportaciones a nuestros servicios y productos.</p><br>
+        <p class="pEntrada">Tus comentarios son muy importantes para nosotros. Mandenos un mensaje si tiene quejas, suguerencias, recomendaciones o aportaciones a nuestros servicios y productos.</p>
         <div class="formulario">
         <form action="Comentario Enviado.php" method="POST" onsubmit="return validar4();">
             <div class="row">
@@ -39,7 +39,7 @@
                     <label>Nombre (s):</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" name="nombre" id="nombre" onkeypress="return soloLetras(event)" placeholder="Ingresa tu nombre(s).."><br>
+                    <input type="text" name="nombre" id="nombre" onkeypress="return soloLetras(event)" placeholder="Ingresa tu nombre(s)..">
                 </div>
             </div>
             
@@ -75,7 +75,7 @@
                     <label>Estado:</label>
                 </div>
                 <div class="col-75">
-                    <select id="estado" name="estado" size="1" placeholder="Elige un estado.."></select><br>
+                    <select id="estado" name="estado" size="1" placeholder="Elige un estado.."></select>
                 </div>
             </div>
 
@@ -84,35 +84,33 @@
                     <label>Comentarios:</label>
                 </div>
                 <div class="col-75">
-                    <textarea name="comentario" id="comentario" style="height:180px" placeholder="Ingresa tu comentario(s).."></textarea><br>
+                    <textarea name="comentario" id="comentario" style="height:180px" placeholder="Ingresa tu comentario(s).."></textarea>
                 </div>
             </div>
     		
             <div class="intro">
-                <br><input type="submit" value="Enviar"> 
+                <input type="submit" value="Enviar"> 
                 <input type="reset" value="Limpiar">
             </div>
-            <br><br>
         </form>
         </div>
         
         <p class="pMedio"><b>Email:</b> info@btrofficial.com</p>
-        <br><p class="pMedio">Síguenos en nuestras redes sociales</p>
-        <a title="Facebook" href="https://www.facebook.com/bigtimerush" target="_blank"><img src="./img/facebook.png" class="redes" alt="Facebook"></a>
-        <a title="Twitter" href="https://twitter.com/bigtimerush" target="_blank"><img src="./img/twitter.png" class="redes" alt="Twitter"></a>
-        <a title="Instagram" href="https://www.instagram.com/bigtimerush/?hl=en" target="_blank"><img src="./img/instagram.png" class="redes" alt="Instagram"></a>
-        <a title="Youtube" href="https://www.youtube.com/user/BIGtimeRUSH" target="_blank"><img src="./img/youtube.png" class="redes" alt="Youtube"></a>
+        <p class="pMedio">Síguenos en nuestras redes sociales</p>
+        <a title="Facebook" href="https://www.facebook.com/bigtimerush" target="_blank"><img class="redes" src="./img/facebook.png" alt="Facebook"></a>
+        <a title="Twitter" href="https://twitter.com/bigtimerush" target="_blank"><img class="redes" src="./img/twitter.png" alt="Twitter"></a>
+        <a title="Instagram" href="https://www.instagram.com/bigtimerush/?hl=en" target="_blank"><img class="redes" src="./img/instagram.png" alt="Instagram"></a>
+        <a title="Youtube" href="https://www.youtube.com/user/BIGtimeRUSH" target="_blank"><img class="redes" src="./img/youtube.png" alt="Youtube"></a>
         
-        <br><hr><br><br>
-        <h1><b>VISITANOS</b></h1>
+        <hr>
+        <h2><b>VISITANOS</b></h2>
         <p class="pMedio">Ven y conoce nuestra tienda</p>
-        <p class="pMedio">Calle 6 No. 3306, Colonia Loma Xicohtencatl,<br>Tlaxcala, Tlaxcala</p><br>
+        <p class="pMedio">Avenida San Claudio, Colonia San Manuel<br>Puebla, Puebla</p><br>
         <p class="pMedio">Horario de Lunes a Viernes</p>
         <p class="pMedio">11:00 a 19:00</p>
         <p class="pMedio">Sabados</p>
         <p class="pMedio">11:00 a 16:00</p><br>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.4844094312434!2d-98.24696698583861!3d19.304775249759693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfd9698a4320ef%3A0x3d4bd230384fb07f!2sC.%206%203306%2C%20La%20Loma%20Xicohtencatl%2C%20Xicoht%C3%A9ncatl%2C%2090070%20Tlaxcala%20de%20Xicoht%C3%A9ncatl%2C%20Tlax.!5e0!3m2!1ses-419!2smx!4v1638503528376!5m2!1ses-419!2smx"></iframe>
-        <br><br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15089.701503233391!2d-98.20935914200126!3d19.000968581718094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfbf5e12520371%3A0x471e3afdf138fca5!2sCd%20Universitaria%2C%2072592%20Puebla%2C%20Pue.!5e0!3m2!1ses-419!2smx!4v1675934862332!5m2!1ses-419!2smx"></iframe>
     </div>
     
     <div class="footer">
