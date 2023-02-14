@@ -21,7 +21,7 @@ if(!isset($usuario)){
     <script src="./js/Archivo.js"></script>
 </head>
 <body>
-<img class="fondo" src="./img/Fondo.jpg" alt="Fondo">
+    <img class="fondo" src="./img/Fondo.jpg" alt="Fondo">
     <header>
         <div class="container">
             <a title="Inicio" href="Inicio.php"><img class="logo" src="./img/Logo.png" alt="Logo Principal"></a>

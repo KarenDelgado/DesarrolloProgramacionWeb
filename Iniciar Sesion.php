@@ -33,30 +33,30 @@
         <h1><b>INICIAR SESIÓN</b></h1>
         <p class="pMedio">¡Ingresa a tu cuenta para comprar artículos y obten grandes descuentos!</p><br>
         <div class="formulario">
-        <form action="loguear.php" method="POST" onsubmit="return validar2();">
-            <div class="row">
-                <div class="col-25">
-                     <label>Usuario:</label>
+            <form action="loguear.php" method="POST" onsubmit="return validar2();">
+                <div class="row">
+                    <div class="col-25">
+                        <label>Usuario:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="usuario" id="username" onblur="valida_correo()" placeholder="Introduzca su nick..."><span id="emailOK"></span>
+                    </div>
                 </div>
-                <div class="col-75">
-                    <input type="text" name="usuario" id="username" onblur="valida_correo()" placeholder="Introduzca su nick..."><span id="emailOK"></span>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-25">
-                     <label>Contraseña:</label>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Contraseña:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="password" name="contra" id="password" placeholder="Introduzca su contraseña...">
+                    </div>
                 </div>
-                <div class="col-75">
-                    <input type="password" name="contra" id="password" placeholder="Introduzca su contraseña...">
+                
+                <div class="intro">
+                    <input type="submit" value="Ingresar"> 
+                    <input type="reset" value="Limpiar">
                 </div>
-            </div>
-            
-            <div class="intro">
-                <input type="submit" value="Ingresar"> 
-                <input type="reset" value="Limpiar">
-            </div>
-        </form>
+            </form>
         </div>
         <p class="pMedio">¿Usuario nuevo?</p>
         <a href="Registro.html" class="pMedio"><i class="fas fa-user-plus"></i> Da clic para crear una cuenta</a>

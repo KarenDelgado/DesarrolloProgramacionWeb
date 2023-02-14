@@ -20,10 +20,10 @@ if(!isset($usuario)){
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 <body onload="nobackbutton();">
-	<img src="img/Fondo.jpg" alt="fondo" class="fondo">
+    <img class="fondo" src="./img/Fondo.jpg" alt="Fondo">
     <header>
         <div class="container">
-            <div class="name"> <img class="logo" src="img/Logo.png"> &nbsp; </div>
+            <a title="Inicio" href="Inicio.php"><img class="logo" src="./img/Logo.png" alt="Logo Principal"></a>
         </div>
         <nav id="site-nav" class="site-nav">
             <ul>
@@ -40,12 +40,10 @@ if(!isset($usuario)){
     </header>
     
     <div class="encabezado">
-        <br><br><br>
         <h1 id="saludo_usuario">BIENVENIDO <?php echo $usuario; ?></h1>
         <p class="pEntrada">Puede modificar sus datos sí así lo desea y consultar detalles de los pedidos que ha realizado.</p><br>
-        <img src="img/cheems_perfil.jpg" id="perfil">
-        <br><br><hr><br>
-        <h1>DATOS PERSONALES</h1>
+        <img id="perfil" src="./img/cheems_perfil.jpg" alt="Perfil Cheems">
+        <h2>DATOS PERSONALES</h2>
         <div class="formulario" id="vista_datos">
             <?php
             include("conexion.php");
@@ -94,7 +92,7 @@ if(!isset($usuario)){
     </div> 
     
     <div class="footer">
-        <img class="logoFooter" src="img/Logo.png">
+        <img class="logoFooter" src="./img/Logo.png" alt="Logo Footer">
         <h2>Copyright © Todos los derechos reservados.</h2>
     </div>
 </body>

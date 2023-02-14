@@ -1,0 +1,13 @@
+.pMedio{
+    @include pAlineacion(center);
+    margin-bottom: 20px;
+}
+.pDerecha{
+    @include pAlineacion(right);
+    font-size: 1em;
+}
+.pJustificado{
+    @include pAlineacion(justify);
+    font-size: 1em;
+}
+

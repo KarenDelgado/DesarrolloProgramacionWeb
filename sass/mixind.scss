@@ -1,0 +1,7 @@
+@import "variables";
+@mixin pAlineacion($alineacion){
+    text-align: $alineacion;
+    color: $colorP;
+    margin: 0;
+    padding: 3px;
+}

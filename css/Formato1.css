@@ -1,4 +1,4 @@
-/*Etiquetas principales*/         /*LISTA*/
+/*Etiquetas principales*/ 
 body{
     font-family: 'Roboto', sans-serif;
     margin:0;
@@ -24,9 +24,7 @@ iframe{
   border: none;
   margin: 0px auto;
 }
-/*-------------------------------------------------------------------------*/
-/*-------------------------------------------------------------------------*/
-/*General*/         /*LISTA*/
+/*General*/   
 .fondo{
   z-index: -999;
   width: 100%;
@@ -52,9 +50,7 @@ iframe{
   float: center;
   align-content: center;
 }
-/*-------------------------------------------------------------------------*/
-/*-------------------------------------------------------------------------*/
-/*Menú*/          /*LISTA*/
+/*Menú*/    
 header{
     background: transparent;
     color: #ebebd3;
@@ -152,9 +148,7 @@ header::after{
 .hamburger::after{
     transform: translateY(3px);
 }
-/*-------------------------------------------------------------------------*/
-/*-------------------------------------------------------------------------*/
-/*Pagina Inicio.hmtl*/         /*LISTA*/
+/*Pagina Inicio.hmtl*/  
 #principal{
   width: 95%;
   height: auto;
@@ -193,9 +187,7 @@ header::after{
   font-size: 95%;
   text-decoration: none;
 }
-/*-------------------------------------------------------------------------*/
-/*-------------------------------------------------------------------------*/
-/*Adicional*/           /*LISTA*/
+/*Adicional*/    
 .intro{
   margin: 5% auto;
   text-align: center;
@@ -207,9 +199,7 @@ header::after{
 .mySlides{
   display:none;
 }
-/*-------------------------------------------------------------------------*/
-/*-------------------------------------------------------------------------*/
-/*Pagina Productos.html*/         /*LISTA*/
+/*Pagina Productos.html*/  
 #productos{
   width: 90%; 
   margin: 0 auto;
@@ -258,10 +248,6 @@ header::after{
 }
 .area9{
   grid-area: area9;
-}
-.product{
-  width: 50%; 
-  margin: 0 auto;
 }
 .titulo_productos_modal{
   height: 100%;
@@ -327,7 +313,7 @@ header::after{
   background-color: black;
   color: white;
 }
-.overlay {
+.overlay{
   background: rgba(0,0,0,.5);
   position: fixed;
   top: 0;
@@ -339,10 +325,10 @@ header::after{
   display: flex;
   visibility: hidden;
 }
-.overlay.active {
+.overlay.active{
   visibility: visible;
 }
-.popup .btn-cerrar-popup {
+.popup .btn-cerrar-popup{
   font-size: 30px;
   line-height: 16px;
   display: block;
@@ -350,16 +336,13 @@ header::after{
   transition: .3s ease all;
   color: #BBBBBB;
 }
-.popup .btn-cerrar-popup:hover {
+.popup .btn-cerrar-popup:hover{
   color: #000;
 }
-.popup.active { 
+.popup.active{ 
   transform: scale(1); 
   opacity: 1; 
 }
-/*-------------------------------------------------------------------------*/
-
-
 /*Preorden.php*/
 .preorden{
   width: 60%; 
@@ -395,9 +378,7 @@ header::after{
   width: 300px;
   height: 300px;
 }
-
 /*Paginas Contacto.html, Iniciar Sesion.html y Registro.html*/
-
 .formulario{
   text-align: left;
   width: 75%;
@@ -477,12 +458,7 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
   background-color: white;
   color: black;
 }
-.col-25{
-  float: left;
-  width: 100%;
-  margin-top: 6px;
-}
-.col-75{
+.col-25, .col-75{
   float: left;
   width: 100%;
   margin-top: 6px;
@@ -513,12 +489,6 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
   padding: 3px;
   font-size: 1em;
 }
-.pIzquierda{
-  text-align: left;
-  color: #c0c0c0;
-  margin: 0px auto;
-  padding: 3px;
-}
 .pEntrada{
   text-align: justify;
   width: 80%;
@@ -545,20 +515,6 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
 .redes{
   width: 11%;
 }
-
-/*Pagina Nosotros.html*/
-.nosotrosEncabezado{
-  background: #caf8b6;
-  text-align: center;
-  margin: 0;
-}
-.imgEquipo{ 
-  width: 70%;
-}
-.pNosotros{
-  color: #c0c0c0;
-}
-
 /*Pagina Usuario.php*/
 #saludo_usuario{
   text-transform: uppercase;
@@ -568,17 +524,6 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
   height: auto;
   margin: 10px auto;
   border-radius: 50%;
-}
-#op_modificar1, #op_modificar2, #op_modificar3, #indicacion, #cancelar, 
-#modificar_cel, #modificar_contra, #modificar_correo{
-    display: none;
-}
-#detalles_pedidos{
-  width: 95%; 
-  margin: 0 auto;
-  height: 40px;
-  font-size: 1em;
-  color: white
 }
 
 @media screen and (min-width:760px){
@@ -592,7 +537,7 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
       background: black;
       color: white;
   }
-  .footer {
+  .footer{
     margin-top: 8%;
   }
   #top{
@@ -603,19 +548,19 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
     width: 60%;
   }
   .datos_ventana{
-	display: flex;
+	  display: flex;
   	align-items: center;
   }
   .detalle_productos, .costo_producto{
-	font-size: 1.2em;
-	width: 70%;
+    font-size: 1.2em;
+    width: 70%;
   }
   .fotoProducto_ventana{
-	width: 90%;
+	  width: 90%;
   }
   .popup form input[type=number]{
-	font-size: 1.6em;
-	width: 60%;
+    font-size: 1.6em;
+    width: 60%;
   }
   .parte1{
     width: 50%;
@@ -652,7 +597,7 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
     font-size: 1.7em;
     margin: 0px auto
   }
-  .pMedio, .pIzquierda, .pDerecha, .pJustificado{
+  .pMedio, .pDerecha, .pJustificado{
     font-size: 1.5em;
     margin: 0px auto;
     margin-bottom: 30px;
@@ -667,11 +612,7 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
   #perfil{
     width: 35%;
   }
-  #detalles_pedidos{
-    width: 85%; 
-    font-size: 1.2em;
-  }
-  input[type=text], input[type=email],textarea, input[type=password] {
+  input[type=text], input[type=email],textarea, input[type=password]{
     width: 91%;
     padding: 24px;
     font-size: 1.2em;
@@ -681,7 +622,7 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
     padding: 24px;
     font-size: 1.2em;
   }
-  label {
+  label{
     width: 80%;
     padding: 20px 20px 20px 0;
     font-size: 1.2em;
@@ -689,10 +630,10 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
   .enviar_preorden{
     font-size: 0.9em;
   }
-  .alerta, .popup form input[type=submit], .popup form input[type=number] {
+  .alerta, .popup form input[type=submit], .popup form input[type=number]{
     font-size: 1em;
   }
-  span, input[type=submit],input[type=reset], input[type=button], .ver_mas {
+  span, input[type=submit],input[type=reset], input[type=button], .ver_mas{
     font-size: 1.2em;
     margin: 0px;
   }
@@ -703,20 +644,20 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
     width: 500px;
     height: 300px;
   }
-  .col-25 {
+  .col-25{
     float: left;
     width: 30%;
     margin-top: 6px;
   }
-  .col-75 {
+  .col-75{
     float: left;
     width: 70%;
     margin-top: 6px;
   }
-  .col-10 {
+  .col-10{
     width: 6%;
   }
-  .col-90 {
+  .col-90{
     width: 94%;
   }
 }
@@ -807,11 +748,7 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
   #perfil{
     width: 25%;
   }
-  #detalles_pedidos{
-    width: 65%;
-    font-size: 1.4em;
-  }
-  input[type=text], select, input[type=email],textarea, label, 
+  input[type=text], select, input[type=email], textarea, label, 
   span, input[type=submit],input[type=reset], input[type=button], 
   input[type=password]{
     font-size: 1.5em;

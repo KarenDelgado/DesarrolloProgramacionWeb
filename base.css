@@ -1,0 +1,110 @@
+.col, .col-90, .col-70, .col-30, .col-10 {
+  float: left;
+  padding: 5px;
+  margin-top: 6px;
+}
+
+.col-10 {
+  width: 10%;
+}
+
+.col-30 {
+  width: 30%;
+}
+
+.col-70 {
+  width: 70%;
+}
+
+.col-90 {
+  width: 90%;
+}
+
+.pMedio {
+  text-align: center;
+  color: #c0c0c0;
+  margin: 0;
+  padding: 3px;
+  margin-bottom: 20px;
+}
+
+.pDerecha {
+  text-align: right;
+  color: #c0c0c0;
+  margin: 0;
+  padding: 3px;
+  font-size: 1em;
+}
+
+.pJustificado {
+  text-align: justify;
+  color: #c0c0c0;
+  margin: 0;
+  padding: 3px;
+  font-size: 1em;
+}
+
+header {
+  background: transparent;
+  color: #ebebd3;
+  padding: 1.3em 0;
+  position: relative;
+}
+header:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+header .container {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+header .container .logo {
+  width: 6em;
+  float: left;
+  align-content: center;
+}
+header nav .site-nav {
+  top: 90%;
+  right: 0;
+  position: absolute;
+  background: black;
+  clip-path: circle(0px at top right);
+  transition: clip-path ease-in-out 700ms;
+}
+header nav .site-nav .site-nav-open {
+  clip-path: circle(150% at top right);
+}
+header nav .site-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header nav .site-nav li {
+  border-bottom: 1px solid #575766;
+  align-content: center;
+}
+header nav .site-nav li:last-child {
+  border-bottom: none;
+}
+header nav .site-nav li a {
+  color: grey;
+  display: block;
+  padding: 1.5em 2.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+  align-content: center;
+}
+header nav .site-nav li a:hover, header nav .site-nav li a:focus, header nav .site-nav li a:hover, header nav .site-nav li a:focus {
+  background: white;
+  color: black;
+}
+header nav .site-nav li a #actual {
+  color: white;
+}
+header nav .site-nav li a #actual:focus, header nav .site-nav li a #actual:hover {
+  color: black;
+}
+
+/*# sourceMappingURL=base.css.map */

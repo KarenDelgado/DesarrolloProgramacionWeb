@@ -44,39 +44,39 @@ if(!isset($usuario)){
         <h1><b>CONTACTO</b></h1>
         <p class="pEntrada">Tus comentarios son muy importantes para nosotros. Mandanos un mensaje si tiene quejas, suguerencias, recomendaciones o aportaciones a nuestros servicios y productos.</p>
         <div class="formulario">
-        <form action="Comentario_Enviado.php" method="POST" onsubmit="return validar3();">
-            <div class="row">
-                <div class="col-25">
-                    <label>Usuario:</label>
+            <form action="Comentario_Enviado.php" method="POST" onsubmit="return validar3();">
+                <div class="row">
+                    <div class="col-25">
+                        <label>Usuario:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="nombre" id="nombre" class="duser" onkeypress="return soloLetras(event)" value="<?php echo $usuario; ?>" disabled>
+                    </div>
                 </div>
-                <div class="col-75">
-                    <input type="text" name="nombre" id="nombre" class="duser" onkeypress="return soloLetras(event)" value="<?php echo $usuario; ?>" disabled>
+                
+                <div class="row">
+                    <div class="col-25">
+                        <label>Estado:</label>
+                    </div>
+                    <div class="col-75">
+                        <select id="estado" name="estado" size="1" placeholder="Elige un estado.."></select>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-25">
-                    <label>Estado:</label>
-                </div>
-                <div class="col-75">
-                    <select id="estado" name="estado" size="1" placeholder="Elige un estado.."></select>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-25">
-                    <label>Comentarios:</label>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Comentarios:</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea name="comentario" id="comentario" style="height:180px" placeholder="Ingresa tu comentario(s).." ></textarea>
+                    </div>
                 </div>
-                <div class="col-75">
-                    <textarea name="comentario" id="comentario" style="height:180px" placeholder="Ingresa tu comentario(s).." ></textarea>
+                
+                <div class="intro">
+                    <br><input type="submit" value="Enviar"> 
+                    <input type="reset" value="Limpiar">
                 </div>
-            </div>
-            
-            <div class="intro">
-                <br><input type="submit" value="Enviar"> 
-                <input type="reset" value="Limpiar">
-            </div>
-        </form>
+            </form>
         </div>
         
         <p class="pMedio"><b>Email:</b> info@btrofficial.com</p>
