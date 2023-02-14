@@ -66,7 +66,7 @@ if(!isset($usuario)){
             $fecha_actual = date('Y-m-d');
             $restante = $stock - $cantidad;
             /*echo 'Nombre: '.$nombre.', precio: '.$precio.', descripcion: '.$desc.', marca: '.$marca.' c:';*/
-            $insertar = "insert into pedido (id_cliente, id_producto, fecha_pedido, cantidad, precio_total, codigo) values ('$id_comprador','$id','$fecha_actual','$cantidad','$total','$numorden')"; 
+            $insertar = "insert into pedido (id_cliente, id_producto, fecha_pedido, precio_total, unidades, codigo) values ('$id_comprador','$id','$fecha_actual','$total','$cantidad','$numorden')"; 
             $actualizar = "update `producto` set `Cantidad`= '$restante' WHERE `id_producto` = '$id'";
             
             $verificar_codigo = mysqli_query($link, "select * from pedido where codigo = '$numorden'");

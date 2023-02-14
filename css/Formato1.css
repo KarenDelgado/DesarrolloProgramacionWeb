@@ -1,6 +1,5 @@
-/*Datos principales*/
+/*Etiquetas principales*/         /*LISTA*/
 body{
-    /*background: #f0f8ea;*/
     font-family: 'Roboto', sans-serif;
     margin:0;
 }
@@ -25,8 +24,37 @@ iframe{
   border: none;
   margin: 0px auto;
 }
-
-/*Menú*/
+/*-------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------*/
+/*General*/         /*LISTA*/
+.fondo{
+  z-index: -999;
+  width: 100%;
+  height: 100%;
+  position:fixed;
+  top:0;
+  left: 0;
+}
+.encabezado{
+  text-align: center;
+  margin: 0;
+}
+.footer {
+  color: white;
+  margin-top: 14%;
+  padding: 15px;
+  font-size: .5em;
+  text-align: center;
+  font-weight: bolder;
+}
+.logoFooter{
+  width: 11em;
+  float: center;
+  align-content: center;
+}
+/*-------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------*/
+/*Menú*/          /*LISTA*/
 header{
     background: transparent;
     color: #ebebd3;
@@ -124,34 +152,7 @@ header::after{
 .hamburger::after{
     transform: translateY(3px);
 }
-
-/*General*/
-.fondo {
-  z-index: -999;
-  width: 100%;
-  height: 100%;
-  position:fixed;
-  top:0;
-  left: 0;
-}
-.encabezado{
-  text-align: center;
-  margin: 0;
-}
-.footer {
-  color: white;
-  margin-top: 14%;
-  padding: 15px;
-  font-size: .5em;
-  text-align: center;
-  font-weight: bolder;
-}
-.logoFooter{
-  width: 11em;
-  float: center;
-  align-content: center;
-}
-
+/*-------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------*/
 /*Pagina Inicio.hmtl*/         /*LISTA*/
 #principal{
@@ -193,43 +194,22 @@ header::after{
   text-decoration: none;
 }
 /*-------------------------------------------------------------------------*/
-
-/*dddddd*/
+/*-------------------------------------------------------------------------*/
+/*Adicional*/           /*LISTA*/
 .intro{
   margin: 5% auto;
   text-align: center;
-}
-.centrar{
-  width: 100%;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-#col-1{
-  width: 80%;
 }
 [id*="col-"] {
   float: left;
   padding: 5px;
 }
-div.gallery img {
-  width: 80%;
-  height: auto;
-}
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 .mySlides{
   display:none;
 }
-#fotos{
-  width: 100%;
-}
-
-
-/*Pagina Productos.html*/
+/*-------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------*/
+/*Pagina Productos.html*/         /*LISTA*/
 #productos{
   width: 90%; 
   margin: 0 auto;
@@ -237,17 +217,14 @@ div.gallery img {
   justify-content: center;
   align-items: center;
   border: 5px solid transparent;
-}
-.ajustar{
-	border: 15px solid transparent;
-	color: white;
+  color: white;
 }
 .fotoProducto{
 	width: 100%;
+  margin-bottom: 10px;
 }
 .titulo_productos{
   height: 20px;
-  /*background: grey;*/
   font-size: 1.2em;
   text-align: center;
 }
@@ -255,26 +232,53 @@ div.gallery img {
   background-color: transparent;
   padding: 15px 40px;
 }
+.area1{
+  grid-area: area1;
+}
+.area2{
+  grid-area: area2;
+}
+.area3{
+  grid-area: area3;
+}
+.area4{
+  grid-area: area4;
+}
+.area5{
+  grid-area: area5;
+}
+.area6{
+  grid-area: area6;
+}
+.area7{
+  grid-area: area7;
+}
+.area8{
+  grid-area: area8;
+}
+.area9{
+  grid-area: area9;
+}
 .product{
   width: 50%; 
   margin: 0 auto;
 }
 .titulo_productos_modal{
   height: 100%;
-  /*background: grey;*/
   font-size: 1.6em;
 }
 .detalle_productos{
-  /*background: pink;*/
   margin: 0 auto;
   font-size: 1em;
   width: 80%;
+  margin-bottom: 15px;
 }
 .costo_producto{
   margin: 0 auto;
   font-size: 1em;
   width: 80%;
   text-align: center;
+  margin-bottom: 25px;
 }
 .dato{
   display: none;
@@ -353,6 +357,7 @@ div.gallery img {
   transform: scale(1); 
   opacity: 1; 
 }
+/*-------------------------------------------------------------------------*/
 
 
 /*Preorden.php*/
@@ -390,31 +395,6 @@ div.gallery img {
   width: 300px;
   height: 300px;
 }
-/*.producto{
-  background: #cbfeec;
-  color: black;
-  width: 100%;
-  height: auto;
-  text-align: center;
-}
-.pProductoEncabezado{
-  text-align: center;
-  color: #4c4f4c;
-  margin: 0;
-  padding: 3px;
-  color: #4c4f4c;
-}
-.pProducto{
-  text-align: justify;
-  color: #4c4f4c;
-  margin: 0;
-  padding: 3.2px;
-  color: #4c4f4c;
-}
-hr.linea{
-  color: grey;
-}*/
-
 
 /*Paginas Contacto.html, Iniciar Sesion.html y Registro.html*/
 
@@ -435,7 +415,7 @@ input[type=text], input[type=email], textarea, input[type=password]{
   color: white;
   font-family: sans-serif;
 }
-input[type=text].duser, input[type=password].duser {
+input[type=text].duser, input[type=password].duser{
   color: white;
 }
 select{
@@ -460,7 +440,7 @@ input[type=checkbox]{
   background-color: transparent;
   transform: scale(1.2);
 }
-label {
+label{
   padding: 10px 10px 10px 0;
   display: inline-block;
   font-size: 100%;
@@ -482,7 +462,7 @@ span{
   font-size: 65%;
   text-decoration: none;
 }
-input[type=submit],input[type=reset], input[type=button] {
+input[type=submit],input[type=reset], input[type=button]{
   background-color: transparent;
   color: white;
   padding: 14px 40px;
@@ -497,17 +477,17 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
   background-color: white;
   color: black;
 }
-.col-25 {
+.col-25{
   float: left;
   width: 100%;
   margin-top: 6px;
 }
-.col-75 {
+.col-75{
   float: left;
   width: 100%;
   margin-top: 6px;
 }
-.row::after {
+.row::after{
   content: "";
   clear: both;
   display: table;
@@ -517,6 +497,7 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
   color: #c0c0c0;
   margin: 0;
   padding: 3px;
+  margin-bottom: 20px;
 }
 .pDerecha{
   text-align: right;
@@ -544,15 +525,13 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
   color: #c0c0c0;
   margin: 0px auto;
   margin-bottom: 20px;
-  /*padding: 3px;
-  font-size: 0.8em;*/
 }
-.col-10 {
+.col-10{
   float: left;
   width: 10%;
   margin-top: 6px;
 }
-.col-90 {
+.col-90{
   float: left;
   width: 90%;
   margin-top: 6px;
@@ -600,9 +579,6 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
   height: 40px;
   font-size: 1em;
   color: white
-}
-.enmarcar{
-  border: 1px #979797 solid;
 }
 
 @media screen and (min-width:760px){
@@ -653,14 +629,6 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
     width: 19em;
     height: auto;
   }
-  .centrar{
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  #col-1{
-    width: 80%;
-  }
   .alinear{
     display: flex;
     justify-content: center;
@@ -669,8 +637,8 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
     margin-right: auto;
   }
   .popup {
-	width: 600px;
-   }
+	  width: 600px;
+  }
   .h1Inicio{
     font-size: 3.2em;
   }
@@ -684,9 +652,14 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
     font-size: 1.7em;
     margin: 0px auto
   }
-  .pMedio, .pIzquierda, .pDerecha, .pJustificado, .pEntrada{
+  .pMedio, .pIzquierda, .pDerecha, .pJustificado{
     font-size: 1.5em;
     margin: 0px auto;
+    margin-bottom: 30px;
+  }
+  .pEntrada{
+    font-size: 1.5em;
+    margin-bottom: 35px;
   }
   .redes{
     width: 6%;
@@ -788,7 +761,11 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
   }
   #productos{
     width: 75%; 
-    display: inline-flex;
+    display: grid;
+    grid-template-areas: 
+    " area1 area2 area3 "
+    " area4 area5 area6 "
+    " area7 area8 area9 ";
   }
   #preorden{
     width: 60%; 
@@ -858,9 +835,6 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
   iframe{
     width: 650px;
     height: 370px;
-  }
-  #col-1{
-    width: 50%;
   }
   .logoFooter{
     width: 12em;

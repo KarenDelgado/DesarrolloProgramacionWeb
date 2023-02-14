@@ -21,7 +21,7 @@
                 <li><a href="index.html"><i class="fa fa-home"></i> INICIO</a></li>
                 <li><a href="Productos.html"><i class="fa fa-shopping-bag"></i> PRODUCTOS</a></li>
                 <li><a href="Contacto.html"><i class="fas fa-headset"></i> CONTACTO</a></li>
-                <li><a id="actual" href="Iniciar Sesion.php"><i class="fas fa-sign-in-alt"></i> INICIAR SESIÓN | REGRISTRARSE</a></li>
+                <li><a id="actual" href="Iniciar Sesion.php"><i class="fas fa-sign-in-alt"></i> INICIAR SESIÓN | REGISTRARSE</a></li>
             </ul>
         </nav>
         <div id="menu-toggle" class="menu-toggle" onClick="cambiarClase()">

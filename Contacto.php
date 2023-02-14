@@ -24,7 +24,7 @@ if(!isset($usuario)){
     <img class="fondo" src="./img/Fondo.jpg" alt="Fondo">
     <header>
         <div class="container">
-            <a title="Inicio" href="index.html"><img class="logo" src="./img/Logo.png" alt="Logo Principal"></a>
+            <a title="Inicio" href="Inicio.php"><img class="logo" src="./img/Logo.png" alt="Logo Principal"></a>
         </div>
         <nav id="site-nav" class="site-nav">
             <ul>
