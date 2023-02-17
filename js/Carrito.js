@@ -4,63 +4,63 @@ const merch = [
     nombre: "Hoodie Black",
     precio: 1000,
     cantidad: 1,
-    img: "../img/productos/producto1.png",
+    img: "./img/productos/producto1.png",
   },
   {
     id: 2,
     nombre: "Hoodie White",
     precio: 1000,
     cantidad: 1,
-    img: "../img/productos/producto2.png",
+    img: "./img/productos/producto2.png",
   },
   {
     id: 3,
     nombre: "Sudadera Black",
     precio: 950,
     cantidad: 1,
-    img: "../img/productos/producto3.png",
+    img: "./img/productos/producto3.png",
   },
   {
     id: 4,
     nombre: "Sudadera Red",
     precio: 950,
     cantidad: 1,
-    img: "../img/productos/producto4.png",
+    img: "./img/productos/producto4.png",
   },
   {
     id: 5,
     nombre: "Playera Manga Larga White",
     precio: 950,
     cantidad: 1,
-    img: "../img/productos/producto5.png",
+    img: "./img/productos/producto5.png",
   },
   {
     id: 6,
     nombre: "Playera Manga Corta Tan",
     precio: 750,
     cantidad: 1,
-    img: "../img/productos/producto6.png",
+    img: "./img/productos/producto6.png",
   },
   {
     id: 7,
     nombre: "Playera Manga Corta Black",
     precio: 750,
     cantidad: 1,
-    img: "../img/productos/producto7.png",
+    img: "./img/productos/producto7.png",
   },
   {
     id: 8,
     nombre: "Gorra Tan",
     precio: 550,
     cantidad: 1,
-    img: "../img/productos/producto8.png",
+    img: "./img/productos/producto8.png",
   },
   {
     id: 9,
     nombre: "Gorro Red",
     precio: 550,
     cantidad: 1,
-    img: "../img/productos/producto9.png",
+    img: "./img/productos/producto9.png",
   },
 ];
 
@@ -90,14 +90,14 @@ const contenedorProductos = document.getElementById("productos");
 merch.forEach((prod) => {
   const div = document.createElement("div");
   div.innerHTML += `
-    <div class="area${prod.id_producto}">
-      <img src="${prod.img}" class="fotoProducto" alt="Producto${prod.id_producto}">
-      <b class="titulo_productos">${prod.Nombre}</b><br>
-      <b class="titulo_productos">$${prod.Precio}</b>
+    <div class="area${prod.id}">
+      <img src="${prod.img}" class="fotoProducto" alt="Producto${prod.id}">
+      <b class="titulo_productos">${prod.nombre}</b><br>
+      <b class="titulo_productos">$${prod.precio}</b>
         <div class="comprar">
           <button class="ver_mas">VER MAS</button>
         </div>
-      </div>
+    </div>
     `
   contenedorProductos.appendChild(div);
   const botonAgregarCarrito = document.getElementById(

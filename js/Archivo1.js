@@ -1,53 +1,15 @@
-/*const slider = document.querySelector("#slider");
-  let sliderSection = document.querySelectorAll(".slider_section");
-  let sliderSectionLast = sliderSection[sliderSection.length -1];
+function openNav() {
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+if(screen.width < 760){
+  document.getElementById("myOffcanvas").style.width = "100%";
+} else if(screen.width < 1024){
+  document.getElementById("myOffcanvas").style.width = "70%";
+} else {
+  document.getElementById("myOffcanvas").style.width = "40%";
+}
+}
 
-  const btnLeft = document.querySelector("#btn-left");
-  const btnRight = document.querySelector("#btn-right");
-
-  slider.insertAdjacentElement('afterbegin', sliderSectionLast);
-
-  function Next(){
-    let sliderSectionFirst = document.querySelectorAll(".slider_section")[0];
-    slider.style.marginLeft = "-200%";
-    slider.style.transition = "all 0.5s";
-    setTimeout(function(){
-      slider.style.transition = "none";
-      slider.insertAdjacentElement('beforeend', sliderSectionFirst);
-      slider.style.marginLeft = "-100%";
-    }, 500);
-  }
-
-  function Prev(){
-    let sliderSection = document.querySelectorAll(".slider_section");
-    let sliderSectionLast = sliderSection[sliderSection.length -1];  
-    slider.style.marginLeft = "0";
-    slider.style.transition = "all 0.5s";
-    setTimeout(function(){
-      slider.style.transition = "none";
-      slider.insertAdjacentElement('afterbegin', sliderSectionLast);
-      slider.style.marginLeft = "-100%";
-    }, 500);
-  }
-
-  btnRight.addEventListener('click', function(){
-    Next();
-  });
-
-  btnLeft.addEventListener('click', function(){
-    Prev();
-  });
-
-  setInterval(function(){
-    Next();
-  }, 5000);*/
-
-
-  function classToggle() {
-  var el = document.querySelector('.icon-cards__content');
-  el.classList.toggle('step-animation');
-  }
-
-  document.querySelector('#toggle-animation').addEventListener('click', classToggle);
-
-  
+function closeNav() {
+  document.getElementById("myOffcanvas").style.width = "0";
+  document.body.style.backgroundColor = "white";
+}

@@ -2,6 +2,7 @@
 body{
     font-family: 'Roboto', sans-serif;
     margin:0;
+    transition: background-color .5s;
 }
 h1, h2, .copyP{
   margin: 30px auto;
@@ -37,7 +38,7 @@ iframe{
   text-align: center;
   margin: 0;
 }
-.footer {
+footer {
   color: white;
   margin-top: 14%;
   padding: 15px;
@@ -109,12 +110,21 @@ header::after{
     text-decoration: none;
     align-content: center;
 }
+
+.site-nav p{
+  color: goldenrod;
+  display: block;
+  padding: 1.5em 5em;
+  align-content: center;
+  margin: 0;
+  font-size: auto;
+}
 .site-nav a:hover,
 .site-nav a:focus, 
 .site-nav i:hover,
 .site-nav i:focus,
-#carrito:hover,
-#carrito:focus{
+.site-nav p:hover,
+.site-nav p:focus{
     background: white;
     color: black;
 }
@@ -171,6 +181,7 @@ header::after{
 .top_img{
   width: 100%;
   border: 5px solid goldenrod;
+  margin-bottom: 10px;
 }
 .top_etiqueta{
   width: 100%;
@@ -431,12 +442,12 @@ label{
   color: white;
 }
 span{
-  color: indigo;
+  color: goldenrod;
   font-size: 60%;
 }
 .alerta{
   width: 70%;
-  background-color: indigo;
+  background-color: goldenrod;
   color: white;
   padding: 14px 30px;
   border: 3px lightblue solid;
@@ -528,6 +539,42 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
   border-radius: 50%;
 }
 
+.offcanvas {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.offcanvas P {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: goldenrod;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav P:hover {
+  color: #f1f1f1;
+}
+.offcanvas .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .offcanvas {padding-top: 15px;}
+  .offcanvas a {font-size: 18px;}
+}
+
 @media screen and (min-width:760px){
   #actual:focus, #actual:hover{
     color: white;
@@ -536,12 +583,12 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
   .site-nav a:focus, 
   .site-nav i:hover,
   .site-nav i:focus, 
-  #carrito:hover,
-  #carrito:focus{
+  .site-nav p:hover,
+  .site-nav p:focus{
       background: black;
       color: white;
   }
-  .footer{
+  footer{
     margin-top: 8%;
   }
   #top{
@@ -678,18 +725,15 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
       display: inline-block;
       border: none;
   }
-  .site-nav a{
+  .site-nav a, .site-nav p{
       padding: 0;
       margin-left: 1.7em;
   }
-  #carrito{
-    color: grey;
-    align-content: center;
-  }
+  
   .site-nav a:hover,
   .site-nav a:focus,
-  #carrito:hover,
-  #carrito:focus{
+  .site-nav p:hover,
+  .site-nav p:focus{
       background: transparent;
   }
   .presentacion{
@@ -776,7 +820,7 @@ input[type=submit]:hover, input[type=button]:hover,input[type=reset]:hover,
   .logoFooter{
     width: 12em;
   }
-  .footer {
+  footer {
     font-size: .6em;
     margin-top: 4%;
   }
