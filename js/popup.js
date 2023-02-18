@@ -16,8 +16,8 @@ btnCerrarPopup.addEventListener('click', function(e){
 
 //Ventana 1
 var btnAbrirPopup1 = document.getElementById('btn-abrir-popup1'),
-	overlay1 = document.getElementById('overlay1'),
-	popup1 = document.getElementById('popup1'),
+	overlay1 = document.getElementById('overlay'),
+	popup1 = document.getElementById('popup'),
 	btnCerrarPopup1 = document.getElementById('btn-cerrar-popup1');
 
 btnAbrirPopup1.addEventListener('click', function(){

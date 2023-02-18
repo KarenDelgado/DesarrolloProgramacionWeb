@@ -10,7 +10,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="./js/Archivo.js"></script>
         <script src="./js/Archivo1.js"></script>
-        <script src="./js/Carrito.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     </head>
 
@@ -44,10 +43,10 @@
                             <i class="fas fa-sign-in-alt"></i> INICIAR SESIÓN | REGISTRARSE
                         </a>
                     </li>
-                    <li>
-                        <p id="contadorCarrito" onclick="openNav()">
+                    <li onclick="openNav()">
+                        <div id="contenedorContar">
                             <i class="fas fa-shopping-cart"></i>
-                        </p>
+                        </div>
                     </li>
                 </ul>
             </nav>
@@ -62,20 +61,42 @@
                     <b>PRODUCTOS</b>
                 </h1>
                 <p class="pMedio">FEATURED COLLECTION</p>
-                <div id="productos">
+                <section id="productos">
                     
+                </section>
+            </div>
+            <aside>
+                <div id="myOffcanvas" class="offcanvas">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <p>CARRITO DE COMPRAS</p>
+                    <div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th class="tituloTabla" scope="col">Producto</th>
+                                    <th class="tituloTabla" scope="col">Cantidad</th>
+                                    <th class="tituloTabla" scope="col">Precio</th>
+                                    <th class="tituloTabla" scope="col">Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody id="carritoOffcanvas"></tbody>
+                        </table>
+                        <div class="intro">
+                            <p id="pTotalCarrito">Precio Total: $0 </p>
+                            <button id="terminarCompra" class="ver_mas">COMPRAR</button>
+                        </div> 
+                    </div> 
                 </div>
-            </div>
-
-            <div id="myOffcanvas" class="offcanvas">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <p>CARRITO DE COMPRAS</p>
-            </div>
+            </aside>
+            
         </main>
 
         <footer>
             <img class="logoFooter" src="./img/Logo.png" alt="Logo Footer">
             <h2>Copyright © Todos los derechos reservados.</h2>
         </footer>
+        
+        <script src="./js/Carrito.js"></script>
     </body>
 </html>
