@@ -26,7 +26,7 @@ header{
             background: black;
             clip-path: circle(0px at top right);
             transition: clip-path ease-in-out 700ms;
-             .site-nav-open{
+            .site-nav-open{
                 clip-path: circle(150% at top right);
             }
             ul{

@@ -572,11 +572,11 @@ td {
   width: 20%;
   font-size: 14px;
 }
-.prodEnCarrito{
+.prodEnCarrito {
   text-align: center;
   height: 10px;
 }
-.imgCarrito{
+.imgCarrito {
   width: 40px;
   height: auto;
 }
@@ -735,12 +735,12 @@ td {
     width: 94%;
   }
   th,
-td {
-  font-size: 20px;
-}
-.imgCarrito{
-  width: 50px;
-}
+  td {
+    font-size: 20px;
+  }
+  .imgCarrito {
+    width: 50px;
+  }
 }
 
 @media screen and (min-width: 1010px) {

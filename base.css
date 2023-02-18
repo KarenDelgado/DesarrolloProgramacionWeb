@@ -1,4 +1,8 @@
-.col, .col-90, .col-70, .col-30, .col-10 {
+.col,
+.col-90,
+.col-70,
+.col-30,
+.col-10 {
   float: left;
   padding: 5px;
   margin-top: 6px;
@@ -96,14 +100,18 @@ header nav .site-nav li a {
   text-decoration: none;
   align-content: center;
 }
-header nav .site-nav li a:hover, header nav .site-nav li a:focus, header nav .site-nav li a:hover, header nav .site-nav li a:focus {
+header nav .site-nav li a:hover,
+header nav .site-nav li a:focus,
+header nav .site-nav li a:hover,
+header nav .site-nav li a:focus {
   background: white;
   color: black;
 }
 header nav .site-nav li a #actual {
   color: white;
 }
-header nav .site-nav li a #actual:focus, header nav .site-nav li a #actual:hover {
+header nav .site-nav li a #actual:focus,
+header nav .site-nav li a #actual:hover {
   color: black;
 }
 
