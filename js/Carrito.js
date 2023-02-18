@@ -1,9 +1,9 @@
 const contenedorProductos = document.getElementById("productos");
-const contadorCarrito = document.getElementById ("contadorCarrito"); 
+const contadorCarrito = document.getElementById("contadorCarrito");
 const carritoOffcanvas = document.getElementById("carritoOffcanvas");
 const contenedorContadorCarrito = document.getElementById("contenedorContar");
 const precioTotalCarrito = document.getElementById("pTotalCarrito");
-const terminarCompra = document.getElementById ("terminarCompra");
+const terminarCompra = document.getElementById("comprar");
 const contador = document.createElement("p");
 
 const merch = [
@@ -69,15 +69,73 @@ const merch = [
     precio: 550,
     cantidad: 1,
     img: "./img/productos/producto9.png",
-  }
+  },
 ];
 
 const carritoDeCompras = [];
 
-merch.forEach (prod => {
+// Función para ordenar los productos de menor a mayor según el precio
+function ordenarMenorAMayor() {
+  merch.sort((a, b) => a.precio - b.precio);
+}
+
+// Función para ordenar los productos de mayor a menor según el precio
+function ordenarMayorAMenor() {
+  merch.sort((a, b) => b.precio - a.precio);
+}
+
+// Función para imprimir los productos
+function imprimirProductos() {
+  contenedorProductos.innerHTML = "";
+  merch.forEach((prod) => {
+    const div = document.createElement("div");
+    div.innerHTML += `
+      <div>
+        <img src="${prod.img}" class="fotoProducto" alt="Producto${prod.id}">
+        <p class="titulo_productos">
+          <b>${prod.nombre}</b>
+        </p>
+        <p class="titulo_productos">
+          <b>$${prod.precio}</b>
+        </p>
+        <div class="comprar">
+          <button id="merch${prod.id}" class="ver_mas">AGREGAR A CARRITO</button>
+        </div>
+      </div>
+    `
+    contenedorProductos.appendChild(div);
+    const botonAgregar = document.getElementById(`merch${prod.id}`);
+    botonAgregar.addEventListener("click", () => {
+      agregarProductos(prod.id, carritoDeCompras);
+      agregarContadorCarrito();
+      mostrarCarrito();
+    });
+  });
+}
+
+function ordenarProductos(mayorAMenor) {
+  if (mayorAMenor) {
+    merch.sort((a, b) => b.precio - a.precio);
+  } else {
+    merch.sort((a, b) => a.precio - b.precio);
+  }
+  imprimirProductos(merch);
+}
+
+// ordenar de mayor a menor por defecto
+ordenarProductos(true);
+const ordenamientoSelect = document.getElementById("ordenamiento");
+ordenamientoSelect.addEventListener("change", (event) => {
+  const mayorAMenor = event.target.value === "mayor";
+  ordenarProductos(mayorAMenor);
+});
+
+// Imprime los productos por defecto
+imprimirProductos();
+
+/*merch.forEach((prod) => {
   const div = document.createElement("div");
-    div.innerHTML += 
-  `
+  div.innerHTML += `
     <div>
       <img src="${prod.img}" class="fotoProducto" alt="Producto${prod.id}">
       <p class="titulo_productos">
@@ -90,46 +148,51 @@ merch.forEach (prod => {
         <button id="merch${prod.id}" class="ver_mas">AGREGAR A CARRITO</button>
       </div>
     </div>
-  `
+  `;
   contenedorProductos.appendChild(div);
 
   const botonAgregar = document.getElementById(`merch${prod.id}`);
-  botonAgregar.addEventListener ("click", ()=> {
-      agregarProductos(prod.id, carritoDeCompras);
-      contarProductos();
-      mostrarCarrito();
-  })
-})
+  botonAgregar.addEventListener("click", () => {
+    agregarProductos(prod.id, carritoDeCompras);
+    agregarContadorCarrito();
+    mostrarCarrito();
+  });
+});*/
 
-const agregarProductos = (Seleccionado, carrito)=> {
-  const productoExiste = carritoDeCompras.some (merch => merch.id === Seleccionado);
-  const productoElegido = merch.find (merch => merch.id === Seleccionado);
+const agregarProductos = (Seleccionado, carrito) => {
+  const productoExiste = carritoDeCompras.some(
+    (merch) => merch.id === Seleccionado
+  );
+  const productoElegido = merch.find((merch) => merch.id === Seleccionado);
   if (productoExiste) {
-      let precioInicial = productoElegido.precio;
-      productoElegido.cantidad++;
-      productoElegido.nuevoPrecio = productoElegido.cantidad * precioInicial;
+    let precioInicial = productoElegido.precio;
+    productoElegido.cantidad++;
+    productoElegido.nuevoPrecio = productoElegido.cantidad * precioInicial;
   } else {
-      carrito.push (productoElegido);
-      console.log ("Se añadio al carrito");
-      console.log (carrito);
+    carrito.push(productoElegido);
+    console.log("Se añadio al carrito");
+    console.log(carrito);
   }
-}
+};
 
-const contarProductos = ()=> {
-  if (carritoDeCompras.length !== 0) {
-      contenedorContadorCarrito.appendChild(contador);
-      contador.textContent = carritoDeCompras.length;
-  } else {
-      contador.textContent ="";
+const agregarContadorCarrito = () => {
+  let contador = document.getElementById("contador");
+  if (!contador) {
+    contador = document.createElement("p");
+    contador.setAttribute("id", "contador");
+    contenedorContadorCarrito.appendChild(contador);
   }
-}
+  contador.textContent = carritoDeCompras.length;
+  if (carritoDeCompras.length === 0) {
+    contador.textContent = "";
+  }
+};
 
-const mostrarCarrito = ()=>{
-  carritoOffcanvas.innerHTML="";
-  carritoDeCompras.forEach (producto => {
-      tr = document.createElement ("tr");
-      tr.innerHTML += 
-      `
+const mostrarCarrito = () => {
+  carritoOffcanvas.innerHTML = "";
+  carritoDeCompras.forEach((producto) => {
+    tr = document.createElement("tr");
+    tr.innerHTML += `
           <td>
               <img class="imgCarrito" src="${producto.img}" alt="${producto.nombre}">
           </td>
@@ -139,43 +202,66 @@ const mostrarCarrito = ()=>{
           <td class="prodEnCarrito eliminarProducto">
             <i class="fas fa-trash-alt" id="eliminar${producto.id}"></i>
           </td>
-      `
-      carritoOffcanvas.appendChild(tr)
+      `;
+    carritoOffcanvas.appendChild(tr);
 
-      const botonEliminar = document.getElementById(`eliminar${producto.id}`);
-      botonEliminar.addEventListener("click", ()=> {
-          eliminarProducto(producto.id)
-      })
-  })
-  const totalCarrito = carritoDeCompras.reduce ((acumulador,producto) => acumulador + producto.precio,0);
-  precioTotalCarrito.innerText =`Precio total: $${totalCarrito}`;
-}
+    const botonEliminar = document.getElementById(`eliminar${producto.id}`);
+    botonEliminar.addEventListener("click", () => {
+      eliminarProducto(producto.id);
+    });
+  });
+  /*const totalCarrito = carritoDeCompras.reduce ((acumulador, producto) => acumulador + producto.precio,0);
+  precioTotalCarrito.innerText =`Precio total: $${totalCarrito}`;*/
+  const totalCarrito = carritoDeCompras.reduce(
+    (acumulador, producto) => acumulador + producto.precio * producto.cantidad,
+    0
+  );
+  precioTotalCarrito.innerText = `Precio total: $${totalCarrito}`;
+};
 
 const eliminarProducto = (prodSeleccionado) => {
-  const productoEliminado = carritoDeCompras.find (merch =>merch.id === prodSeleccionado);
-  const index = carritoDeCompras.indexOf (productoEliminado);
-  carritoDeCompras.splice (index,1);
-  agregarContadorCarrito();
+  const productoEliminado = carritoDeCompras.find(
+    (merch) => merch.id === prodSeleccionado
+  );
+  const index = carritoDeCompras.indexOf(productoEliminado);
+  if (productoEliminado.cantidad > 1) {
+    productoEliminado.cantidad--;
+  } else {
+    carritoDeCompras.splice(index, 1);
+  }
   mostrarCarrito();
-}
+  agregarContadorCarrito();
+};
 
-const vaciarCarrito = ()=> {
-  carritoDeCompras.innerHTML =[];
-  carritoOffcanvas.innerHTML =[];
-  contador.textContent ="";
-  precioTotalCarrito.textContent ="Precio Total: $0";
-  contador.classList.remove ("contadorCarrito");
-}
+const vaciarCarrito = () => {
+  carritoDeCompras.innerHTML = [];
+  carritoOffcanvas.innerHTML = [];
+  contador.textContent = "";
+  precioTotalCarrito.textContent = "Precio Total: $0";
+  contador.classList.remove("contadorCarrito");
+};
 
-terminarCompra.addEventListener ("click", ()=> {
-  vaciarCarrito();
-  Swal.fire({
-    title: 'COMPRA REALIZADA',
-    html: 'Muchas gracias por tu compra',
-    confirmButtonText: 'Aceptar',
-    confirmButtonColor: 'indigo',
-    allowOutsideClick: false,
-    imageUrl: 'img/cheems_con_pedido.png',
-    imageWidth:'70%'
-  });
-})
+terminarCompra.addEventListener("click", () => {
+  if (carritoDeCompras.length !== 0) {
+    vaciarCarrito();
+    Swal.fire({
+      title: "COMPRA REALIZADA",
+      html: "Muchas gracias por tu compra",
+      confirmButtonText: "Aceptar",
+      confirmButtonColor: "indigo",
+      allowOutsideClick: false,
+      imageUrl: "img/cheems_con_pedido.png",
+      imageWidth: "70%",
+    });
+  } else if (carritoDeCompras.length == 0) {
+    Swal.fire({
+      title: "Error",
+      html: "Carrito vacio",
+      confirmButtonText: "Aceptar",
+      confirmButtonColor: "indigo",
+      allowOutsideClick: false,
+      imageUrl: "img/cheems_error.png",
+      imageWidth: "70%",
+    });
+  }
+});
