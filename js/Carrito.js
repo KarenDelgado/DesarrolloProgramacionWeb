@@ -102,7 +102,7 @@ function imprimirProductos() {
           <button id="merch${prod.id}" class="ver_mas">AGREGAR A CARRITO</button>
         </div>
       </div>
-    `
+    `;
     contenedorProductos.appendChild(div);
     const botonAgregar = document.getElementById(`merch${prod.id}`);
     botonAgregar.addEventListener("click", () => {
@@ -132,32 +132,6 @@ ordenamientoSelect.addEventListener("change", (event) => {
 
 // Imprime los productos por defecto
 imprimirProductos();
-
-/*merch.forEach((prod) => {
-  const div = document.createElement("div");
-  div.innerHTML += `
-    <div>
-      <img src="${prod.img}" class="fotoProducto" alt="Producto${prod.id}">
-      <p class="titulo_productos">
-        <b>${prod.nombre}</b>
-      </p>
-      <p class="titulo_productos">
-        <b>$${prod.precio}</b>
-      </p>
-      <div class="comprar">
-        <button id="merch${prod.id}" class="ver_mas">AGREGAR A CARRITO</button>
-      </div>
-    </div>
-  `;
-  contenedorProductos.appendChild(div);
-
-  const botonAgregar = document.getElementById(`merch${prod.id}`);
-  botonAgregar.addEventListener("click", () => {
-    agregarProductos(prod.id, carritoDeCompras);
-    agregarContadorCarrito();
-    mostrarCarrito();
-  });
-});*/
 
 const agregarProductos = (Seleccionado, carrito) => {
   const productoExiste = carritoDeCompras.some(
@@ -204,14 +178,11 @@ const mostrarCarrito = () => {
           </td>
       `;
     carritoOffcanvas.appendChild(tr);
-
     const botonEliminar = document.getElementById(`eliminar${producto.id}`);
     botonEliminar.addEventListener("click", () => {
       eliminarProducto(producto.id);
     });
   });
-  /*const totalCarrito = carritoDeCompras.reduce ((acumulador, producto) => acumulador + producto.precio,0);
-  precioTotalCarrito.innerText =`Precio total: $${totalCarrito}`;*/
   const totalCarrito = carritoDeCompras.reduce(
     (acumulador, producto) => acumulador + producto.precio * producto.cantidad,
     0
@@ -234,11 +205,10 @@ const eliminarProducto = (prodSeleccionado) => {
 };
 
 const vaciarCarrito = () => {
-  carritoDeCompras.innerHTML = [];
+  carritoDeCompras.splice(0, carritoDeCompras.length);
   carritoOffcanvas.innerHTML = [];
-  contador.textContent = "";
+  agregarContadorCarrito();
   precioTotalCarrito.textContent = "Precio Total: $0";
-  contador.classList.remove("contadorCarrito");
 };
 
 terminarCompra.addEventListener("click", () => {

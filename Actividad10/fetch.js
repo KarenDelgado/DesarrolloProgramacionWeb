@@ -1,6 +1,6 @@
 const contenedor = document.querySelector(".contenedor");
 
-fetch('search.json')
+fetch('./search.json')
     .then((res) => res.json())
     .then((data => {
         data.forEach (prod => {

@@ -182,6 +182,14 @@ header::after {
   align-items: center;
   border: 5px solid goldenrod;
 }
+#topButton {
+  margin-bottom: 15%;
+}
+.tour {
+  width: 95%;
+  height: auto;
+  margin-bottom: 45px;
+}
 .ventas {
   border: 10px solid goldenrod;
 }
@@ -363,7 +371,6 @@ header::after {
   height: 350px;
 }
 .enviar_preorden {
-  /*background: pink;*/
   font-size: 1.1em;
   height: 40px;
   width: 50px;
@@ -371,6 +378,13 @@ header::after {
 .img_orden {
   width: 300px;
   height: 300px;
+}
+#filtro {
+  text-align: center;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 }
 /*Paginas Contacto.html, Iniciar Sesion.html y Registro.html*/
 .formulario {
@@ -431,7 +445,7 @@ label {
 }
 span {
   color: goldenrod;
-  font-size: 60%;
+  font-size: 100%;
 }
 .alerta {
   width: 70%;
@@ -610,6 +624,9 @@ td {
     width: 60%;
     margin-bottom: 7%;
   }
+  #topButton {
+    margin-bottom: 7%;
+  }
   #productos {
     width: 60%;
   }
@@ -741,6 +758,10 @@ td {
   .imgCarrito {
     width: 50px;
   }
+  #filtro {
+    width: 60%;
+    margin: 25px auto;
+  }
 }
 
 @media screen and (min-width: 1010px) {
@@ -765,7 +786,6 @@ td {
     padding: 0;
     margin-left: 1.7em;
   }
-
   .site-nav a:hover,
   .site-nav a:focus,
   .site-nav p:hover,
@@ -785,14 +805,17 @@ td {
     display: inline-flex;
     margin-bottom: 4%;
   }
+  #topButton {
+    margin-bottom: 4%;
+  }
+  .tour {
+    width: 50%;
+    margin-bottom: 50px;
+  }
   #productos {
     width: 75%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /*grid-template-areas: 
-    " area1 area2 area3 "
-    " area4 area5 area6 "
-    " area7 area8 area9 ";*/
   }
   #preorden {
     width: 60%;
@@ -821,6 +844,9 @@ td {
   }
   .formulario {
     width: 60%;
+  }
+  #filtro {
+    width: 50%;
   }
   .pEntrada {
     width: 60%;

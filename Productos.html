@@ -61,13 +61,22 @@
                     <b>PRODUCTOS</b>
                 </h1>
                 <p class="pMedio">FEATURED COLLECTION</p>
-                <select id="ordenamiento">
-                    <option value="mayor">De mayor a menor</option>
-                    <option value="menor">De menor a mayor</option>
-                </select>
-                <section id="productos">
-                    
-                </section>
+                <div id="filtro">
+                    <div class="row">
+                        <div class="col-25">
+                            <label>
+                                <i class="fas fa-filter"></i> FILTRO
+                            </label>
+                        </div>
+                        <div class="col-75">
+                            <select id="ordenamiento" placeholder="Ordenar de..">
+                                <option value="mayor">De mayor a menor</option>
+                                <option value="menor">De menor a mayor</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <section id="productos"></section>
             </div>
             <aside>
                 <div id="myOffcanvas" class="offcanvas">
@@ -87,7 +96,7 @@
                             <tbody id="carritoOffcanvas"></tbody>
                         </table>
                         <div class="intro">
-                            <p id="pTotalCarrito">Precio Total: $0 </p>
+                            <p id="pTotalCarrito">Precio Total: $0</p>
                             <button id="comprar" class="ver_mas">COMPRAR</button>
                         </div> 
                     </div> 
